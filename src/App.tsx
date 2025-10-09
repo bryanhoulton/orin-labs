@@ -28,7 +28,7 @@ function App() {
       className="flex flex-col h-fit pt-[50vh]"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85)), url('/fall.png')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)), url('/fall.png')",
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
