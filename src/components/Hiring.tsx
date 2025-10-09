@@ -23,8 +23,8 @@ export function JoinUs() {
       <h2 className="text-3xl font-semibold text-gray-900 mb-4">Join Us</h2>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
         We are a small, San Francisco-based research lab focused on making AI
-        that teaches humans. We strongly believe that a small, focused team with
-        a clear vision can build great things.
+        that teaches humans. We are building AI that solves real problems for
+        real people.
       </p>
       <Hiring />
       {location.pathname !== "/mission" && (
