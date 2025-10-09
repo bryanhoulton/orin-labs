@@ -1,4 +1,5 @@
 import { Goals } from '../components/Goals';
+import { Hiring } from '../components/Hiring';
 
 export default function Mission() {
   return (
@@ -34,12 +35,7 @@ export default function Mission() {
           education companies like Clever.
         </p>
 
-        <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
-          We are hiring{" "}
-          <span className="font-bold text-primary">engineers</span>. If you have
-          built realtime AI systems, dynamic memory, or proactive agents, we
-          want to talk to you.
-        </p>
+        <Hiring />
       </div>
     </>
   );
