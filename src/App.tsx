@@ -16,6 +16,7 @@ import Mission from './pages/Mission';
 const HEADER = {
   "/": "Orin Labs",
   "/mission": "Mission",
+  "/hiring": "Team",
 };
 
 function App() {

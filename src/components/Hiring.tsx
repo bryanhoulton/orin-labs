@@ -28,10 +28,17 @@ export function JoinUs() {
         <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
           Learn more about our{" "}
           <a
+            href="/team"
+            className="underline text-primary hover:text-primary-600 transition-colors"
+          >
+            team
+          </a>{" "}
+          and{" "}
+          <a
             href="/mission"
             className="underline text-primary hover:text-primary-600 transition-colors"
           >
-            team and mission
+            mission
           </a>
           .
         </p>
