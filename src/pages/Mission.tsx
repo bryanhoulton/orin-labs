@@ -30,9 +30,9 @@ export default function Mission() {
         <h2 className="text-3xl font-semibold text-gray-900 mb-4">Team</h2>
 
         <p className="text-lg text-gray-600 mb-4 max-w-2xl leading-relaxed">
-          Orin Labs is led by <h6>Bryan Houlton</h6> and backed by top investors
-          like Max Mullen, as well as angel investors from established education
-          companies like Clever.
+          Orin Labs is led by <h6 className="inline">Bryan Houlton</h6> and
+          backed by top investors like Max Mullen, as well as angel investors
+          from established education companies like Clever.
         </p>
 
         <Hiring />
