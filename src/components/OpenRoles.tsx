@@ -31,7 +31,9 @@ const roles: Role[] = [
 export function OpenRoles() {
   return (
     <div className="flex flex-col items-start">
-      <h2 className="text-3xl font-semibold text-gray-900 mb-4">Open Roles</h2>
+      <h2 className="text-3xl font-semibold text-gray-900 mb-4 px-4 md:px-0">
+        Open Roles
+      </h2>
 
       {roles.map((role) => (
         <a href={role.link} key={role.title} className="w-full">
