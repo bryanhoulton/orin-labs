@@ -28,6 +28,8 @@ const HEADER = {
 
 function App() {
   const location = useLocation();
+  const { pathname } = useLocation();
+
   const header = HEADER[location.pathname as keyof typeof HEADER];
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -43,6 +45,10 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div
