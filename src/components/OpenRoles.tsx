@@ -37,9 +37,9 @@ export function OpenRoles() {
         <a href={role.link} key={role.title} className="w-full">
           <button
             key={role.title}
-            className="flex flex-col items-start gap-1 w-full hover:bg-gray-200 cursor-pointer p-4 -mx-4 transition-colors rounded-md group"
+            className="flex text-left flex-col items-start gap-1 w-full hover:bg-gray-200 cursor-pointer p-4 md:-mx-4 transition-colors rounded-md group"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-2">
               <p className="text-lg font-bold text-gray-900 shrink-0 group-hover:text-primary transition-colors">
                 {role.title}
               </p>
