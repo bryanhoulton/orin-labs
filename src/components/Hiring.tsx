@@ -31,7 +31,7 @@ export function JoinUs() {
         <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
           Learn more about our{" "}
           <Link
-            to="/team"
+            to="/hiring"
             className="underline text-primary hover:text-primary-600 transition-colors"
           >
             team
