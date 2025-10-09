@@ -4,10 +4,7 @@ export function Hiring() {
   return (
     <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
       We are{" "}
-      <a
-        href="mailto:bryan@acadialearning.org"
-        className="text-primary underline"
-      >
+      <a href="/hiring" className="text-primary underline">
         hiring engineers
       </a>
       . If you have built realtime AI systems, dynamic memory, or proactive

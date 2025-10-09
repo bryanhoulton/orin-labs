@@ -9,6 +9,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import Hiring from './pages/Hiring';
 import Home from './pages/Home';
 import Mission from './pages/Mission';
 
@@ -44,6 +45,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mission" element={<Mission />} />
+            <Route path="/hiring" element={<Hiring />} />
           </Routes>
         </div>
       </div>
