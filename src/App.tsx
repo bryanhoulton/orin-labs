@@ -17,11 +17,13 @@ import {
 import Hiring from './pages/Hiring';
 import Home from './pages/Home';
 import Mission from './pages/Mission';
+import Research from './pages/Research';
 
 const HEADER = {
   "/": "Orin Labs",
   "/mission": "Mission",
   "/hiring": "Team",
+  "/research": "Research",
 };
 
 function App() {
@@ -61,11 +63,12 @@ function App() {
       </div>
 
       <div className="z-10 md:px-8 lg:px-12">
-        <div className="flex-1 w-fit pr-24 bg-gray-100 md:rounded-2xl z-10 px-4 sm:px-6 md:px-8 lg:px-12 py-16">
+        <div className="flex-1 w-fit max-w-full bg-gray-100 md:rounded-2xl z-10 px-4 sm:px-6 md:px-8 lg:px-12 py-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/hiring" element={<Hiring />} />
+            <Route path="/research" element={<Research />} />
           </Routes>
         </div>
       </div>

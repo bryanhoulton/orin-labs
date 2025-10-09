@@ -104,7 +104,7 @@
 }
 
 html {
-  overscroll-behavior: none;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -291,4 +291,8 @@ h6 {
     border-color: var(--color-neutral-200);
     outline-color: var(--color-neutral-200);
   }
+}
+
+pre {
+  @apply rounded-lg !bg-neutral-800;
 }

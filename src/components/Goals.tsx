@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Goals() {
   return (
     <div className="flex flex-col items-start">
@@ -14,14 +16,12 @@ export function Goals() {
 
         <p className="text-lg text-gray-600 mb-12">
           Learn about{" "}
-          <a
-            href="https://bryanhoulton1.substack.com/p/building-proactive-ai-agents"
+          <Link
+            to="/research"
             className="underline text-primary hover:text-primary-600 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             our proactive agents
-          </a>
+          </Link>
           .
         </p>
       </div>
