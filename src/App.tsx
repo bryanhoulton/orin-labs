@@ -1,4 +1,9 @@
 import {
+  useEffect,
+  useState,
+} from 'react';
+
+import {
   Linkedin,
   Twitter,
 } from 'lucide-react';
@@ -23,16 +28,30 @@ function App() {
   const location = useLocation();
   const header = HEADER[location.pathname as keyof typeof HEADER];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="flex flex-col h-fit pt-[50vh]"
       style={{
         backgroundImage:
           "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.9)), url('/fall.png')",
-        backgroundSize: "cover",
+        backgroundSize: windowWidth < 768 ? "auto" : "cover",
         backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
+        backgroundRepeat: windowWidth >= 768 ? "no-repeat" : "repeat-y",
       }}
     >
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 z-10">
