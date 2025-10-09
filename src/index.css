@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
 @source "../node_modules/slate-ui/";
+
+@font-face {
+  font-family: "Season";
+  src: url("/font2.woff") format("woff");
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -180,7 +184,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: PT Serif;
+  font-family: "Season" !important;
 }
 
 @theme {
@@ -284,7 +288,7 @@ h6 {
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-neutral-300);
-    outline-color: var(--color-neutral-300);
+    border-color: var(--color-neutral-200);
+    outline-color: var(--color-neutral-200);
   }
 }

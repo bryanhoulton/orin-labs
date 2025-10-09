@@ -1,13 +1,11 @@
 export function Goals() {
   return (
     <div className="flex flex-col items-start">
-      <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Goals</h2>
+      <h2 className="text-3xl font-semibold text-gray-900 mb-4">Our Goals</h2>
 
       {/* Goal 01 - Proactive Agents */}
       <div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-4">
-          Proactivity
-        </h3>
+        <p className="text-xl font-semibold text-gray-900 mb-2">Proactivity</p>
         <p className="text-lg text-gray-600 mb-4 max-w-2xl leading-relaxed">
           The job of a tutor is to <em>push</em>, not <em>be pulled</em>. Tutors
           must be proactive, not reactive. They must be present, understand the
@@ -30,9 +28,9 @@ export function Goals() {
 
       {/* Goal 02 - Live Learning */}
       <div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-4">
+        <p className="text-xl font-semibold text-gray-900 mb-2">
           Active Learning
-        </h3>
+        </p>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed">
           Learning is an active process. Tutors need to be present with the
           student via all modalities: voice, video, and interactive UIs.

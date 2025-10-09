@@ -17,7 +17,7 @@ export function JoinUs() {
   const location = useLocation();
   return (
     <div className="flex flex-col items-start">
-      <h2 className="text-2xl font-semibold text-gray-900 mb-4">Join Us</h2>
+      <h2 className="text-3xl font-semibold text-gray-900 mb-4">Join Us</h2>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
         We are a small, San Francisco-based research lab focused on making AI
         that teaches humans. We strongly believe that a small, focused team with

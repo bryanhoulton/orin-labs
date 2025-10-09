@@ -27,7 +27,7 @@ export default function Mission() {
       <hr className="my-12" />
 
       <div className="flex flex-col items-start">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Team</h2>
+        <h2 className="text-3xl font-semibold text-gray-900 mb-4">Team</h2>
 
         <p className="text-lg text-gray-600 mb-4 max-w-2xl leading-relaxed">
           Orin Labs is led by <strong>Bryan Houlton</strong> and backed by top
