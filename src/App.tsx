@@ -85,7 +85,7 @@ function App() {
           <hr className="w-full border-t border-white/20 mb-6" />
           <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 py-4">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6">
-              <span className="font-mono tracking-wide">
+              <span className="text-sm">
                 © {new Date().getFullYear()} Orin Labs, Inc. All rights
                 reserved.
               </span>

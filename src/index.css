@@ -296,3 +296,6 @@ h6 {
 pre {
   @apply rounded-lg !bg-neutral-800;
 }
+.research p {
+  @apply pb-2;
+}
