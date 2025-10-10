@@ -9,9 +9,9 @@ export function Goals() {
       <div>
         <p className="text-xl font-semibold text-gray-900 mb-2">Proactivity</p>
         <p className="text-lg text-gray-600 mb-4 max-w-2xl leading-relaxed">
-          The job of a tutor is to <em>push</em>, not <em>be pulled</em>. Tutors
-          must be proactive, not reactive. They must be present, understand the
-          student, manage families, and plan ahead.
+          The job of a teacher is to <em>push</em>, not <em>be pulled</em>.
+          Teaching is proactive, not reactive. Teachers must be present,
+          understand the student, manage families, and plan ahead.
         </p>
 
         <p className="text-lg text-gray-600 mb-12">
@@ -32,7 +32,7 @@ export function Goals() {
           Active Learning
         </p>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed">
-          Learning is an active process. Tutors need to be present with the
+          Learning is an active process. Teachers need to be present with the
           student via all modalities: voice, video, and interactive UIs.
         </p>
       </div>

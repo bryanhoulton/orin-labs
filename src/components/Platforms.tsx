@@ -6,7 +6,7 @@ export function Platforms() {
       </h2>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
         We've been launching age-specific test platforms to evaluate how our
-        tutors work with families over long-term learning journeys.
+        teachers work with families over long-term learning journeys.
       </p>
 
       <a

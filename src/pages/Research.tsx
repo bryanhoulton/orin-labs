@@ -64,7 +64,7 @@ export default function Research() {
             prevents sustained, autonomous operation.
           </p>
           <p>
-            Applications like tutoring that require long-term engagement,
+            Applications (like teaching) that require long-term engagement,
             planning, and management reveal how inadequate purely reactive
             agents are. Instead, we propose agents that existing independently
             from their user or input events.
