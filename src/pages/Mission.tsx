@@ -5,19 +5,11 @@ export default function Mission() {
   return (
     <>
       <h4 className="text-xl text-gray-900 leading-relaxed mb-6 italic">
-        The quality of education is lowering, despite per-student spending
-        increasing.
+        Humanity will be
         <br />
-        <br />
-        Homeschool rates have doubled since the pandemic,
-        <br />
-        college attendance is falling and costing more,
-        <br />
-        and parents are spending more on education than ever.
-        <br />
-        <br />
-        The clear bottleneck is the ability to{" "}
-        <strong className="text-primary">teach</strong>.
+        forever constrained
+        <br /> until we can scale{" "}
+        <strong className="text-primary">teaching</strong>.
       </h4>
 
       <hr className="my-12" />
@@ -33,6 +25,19 @@ export default function Mission() {
           Orin Labs is led by <h6 className="inline">Bryan Houlton</h6> and
           backed by top investors like Max Mullen, as well as angel investors
           from established education companies like Clever.
+        </p>
+
+        <p className="text-lg text-gray-600 mb-4 max-w-2xl leading-relaxed">
+          We are building a real{" "}
+          <a
+            href="https://en.wikipedia.org/wiki/The_Diamond_Age"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-primary hover:text-primary-600 transition-colors"
+          >
+            Illustrated Primer
+          </a>{" "}
+          for humanity.
         </p>
 
         <Hiring />
