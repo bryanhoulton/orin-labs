@@ -36,6 +36,16 @@ export function Goals() {
           student via all modalities: voice, video, and interactive UIs.
         </p>
       </div>
+
+      {/* Goal 03 - Adaptation */}
+      <div>
+        <p className="text-xl font-semibold text-gray-900 mb-2">Adaptation</p>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed">
+          The power of one-on-one learning is the ability to adapt to the
+          student's needs. This requires a deep understanding of the student's
+          learning style, goals, and progress.
+        </p>
+      </div>
     </div>
   );
 }
