@@ -1,5 +1,6 @@
 import { JoinUs } from '../components/Hiring';
 import { OpenRoles } from '../components/OpenRoles';
+import { Projects } from '../components/Projects';
 
 export default function Hiring() {
   return (
@@ -11,6 +12,10 @@ export default function Hiring() {
       <hr className="my-12" />
 
       <OpenRoles />
+
+      <hr className="my-12" />
+
+      <Projects />
 
       <hr className="my-12" />
 
