@@ -100,7 +100,7 @@ function App() {
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="https://x.com/bryan_houlton"
+                href="https://x.com/0rinlabs"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (Twitter)"
