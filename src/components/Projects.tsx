@@ -6,19 +6,19 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Duplex Voice Pipelines",
+    title: "Long-running Agent Evals",
     description:
-      "Voice agents that can interrupt, act while speaking, and have a sense of time.",
+      "Evaluating & scoring long-running agents in real-world scenarios with messy outcomes.",
     link: "mailto:bryan@orinlabs.org",
   },
   {
-    title: "Autogenerating Knowledge Graphs",
+    title: "Curricular Planning & Frontier Tracking",
     description:
-      "Realtime knowledge graph generation to track student progress.",
+      "Using interaction data to understand student progress and plan for the future.",
     link: "mailto:bryan@orinlabs.org",
   },
   {
-    title: "Generative Learning Interfaces",
+    title: "Active Learning Interfaces",
     description:
       "Design-constrained UIs, games, and other interfaces created on the fly.",
     link: "mailto:bryan@orinlabs.org",
@@ -32,7 +32,14 @@ export function Projects() {
         Open Projects
       </h2>
       <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
-        Email bryan@orinlabs.org if you want to work on any of these projects.
+        Email{" "}
+        <a
+          href="mailto:bryan@orinlabs.org"
+          className="underline text-primary hover:text-primary-600 transition-colors"
+        >
+          bryan@orinlabs.org
+        </a>{" "}
+        if you want to work on any of these projects.
       </p>
 
       {projects.map((project) => (
