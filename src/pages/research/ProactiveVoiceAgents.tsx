@@ -137,8 +137,16 @@ export default function ProactiveVoiceAgents() {
             Pipecat make this trivial.
           </p>
           <p>
-            This guide is a very good introduction for the current state of the
-            art for voice AI.
+            <a
+              href="https://voiceaiandvoiceagents.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-primary hover:text-primary-600 transition-colors"
+            >
+              This guide
+            </a>{" "}
+            is a very good introduction for the current state of the art for
+            voice AI.
           </p>
         </div>
       </section>
