@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { JoinUs } from '../components/Hiring';
@@ -18,7 +19,7 @@ const RESEARCH_POSTS: ResearchPost[] = [
     description:
       "We present a method for building proactive agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, proactive agents actively pursue goals without constant prompting.",
     date: "October 2025",
-    author: "Acadia Engineering",
+    author: "Orin Labs",
     path: "/research/proactive-agents",
   },
   {
@@ -27,7 +28,7 @@ const RESEARCH_POSTS: ResearchPost[] = [
     description:
       "We explore how to build proactive voice agents that work independently of user input. By flipping the traditional voice pipeline, we create agents that can speak first, handle interruptions, and maintain natural conversation flow.",
     date: "January 2025",
-    author: "Acadia Engineering",
+    author: "Orin Labs",
     path: "/research/proactive-voice-agents",
   },
 ];
@@ -42,7 +43,7 @@ export default function Research() {
           Exploring the frontiers of AI agents, autonomous systems, and the
           future of human-computer interaction.
         </p>
-            </div>
+      </div>
 
       {/* Research Posts */}
       <div className="space-y-8">
@@ -53,14 +54,14 @@ export default function Research() {
           >
             <Link
               to={post.path}
-              className="block group hover:bg-gray-50 -m-4 p-4 rounded-lg transition-colors"
+              className="block group hover:bg-gray-200 -m-4 p-4 rounded-lg transition-colors"
             >
               <div className="flex flex-col space-y-4">
-            <div>
+                <div>
                   <h2 className="text-2xl font-semibold text-gray-900 group-hover:text-primary transition-colors mb-2">
                     {post.title}
                   </h2>
-                  <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
                     <Link
                       to="/hiring"
                       className="text-primary underline hover:no-underline"
@@ -69,19 +70,20 @@ export default function Research() {
                     </Link>
                     <span>•</span>
                     <span>{post.date}</span>
-            </div>
-          </div>
+                  </div>
+                </div>
                 <p className="text-gray-700 leading-relaxed">
                   {post.description}
                 </p>
-                <div className="flex items-center text-primary font-medium">
-                  Read more →
-            </div>
-          </div>
+                <div className="flex items-center gap-1 text-primary font-medium">
+                  <span>Read more</span>
+                  <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
             </Link>
           </article>
         ))}
-          </div>
+      </div>
 
       {/* Empty State for Future Posts */}
       {RESEARCH_POSTS.length === 0 && (

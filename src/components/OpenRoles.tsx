@@ -10,20 +10,20 @@ const roles: Role[] = [
     title: "Interactions Engineer",
     description:
       "Building SOTA learning interfaces through voice, video, and interactive UIs.",
-    link: "mailto:bryan@acadialearning.org",
+    link: "mailto:bryan@orinlabs.org",
     location: "San Francisco, CA",
   },
   {
     title: "Voice Infrastructure Engineer",
     description:
       "Building proactive voice agents that feel present, engaging, and limitless.",
-    link: "mailto:bryan@acadialearning.org",
+    link: "mailto:bryan@orinlabs.org",
     location: "San Francisco, CA",
   },
   {
     title: "Applied AI Engineer",
     description: "Working on memory systems, proactive agent runtimes, etc.",
-    link: "mailto:bryan@acadialearning.org",
+    link: "mailto:bryan@orinlabs.org",
     location: "San Francisco, CA",
   },
 ];

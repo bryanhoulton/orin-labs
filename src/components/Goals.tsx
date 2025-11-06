@@ -15,14 +15,12 @@ export function Goals() {
         </p>
 
         <p className="text-lg text-gray-600 mb-12">
-          Learn about{" "}
           <Link
             to="/research"
             className="underline text-primary hover:text-primary-600 transition-colors"
           >
-            our proactive agents
+            See our research on proactive agents
           </Link>
-          .
         </p>
       </div>
 
