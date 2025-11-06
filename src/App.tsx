@@ -18,12 +18,16 @@ import Hiring from './pages/Hiring';
 import Home from './pages/Home';
 import Mission from './pages/Mission';
 import Research from './pages/Research';
+import ProactiveAgents from './pages/research/ProactiveAgents';
+import ProactiveVoiceAgents from './pages/research/ProactiveVoiceAgents';
 
 const HEADER = {
   "/": "Orin Labs",
   "/mission": "Mission",
   "/hiring": "Team",
   "/research": "Research",
+  "/research/proactive-agents": "Proactive Agents",
+  "/research/proactive-voice-agents": "Proactive Voice Agents",
 };
 
 function App() {
@@ -75,6 +79,14 @@ function App() {
             <Route path="/mission" element={<Mission />} />
             <Route path="/hiring" element={<Hiring />} />
             <Route path="/research" element={<Research />} />
+            <Route
+              path="/research/proactive-agents"
+              element={<ProactiveAgents />}
+            />
+            <Route
+              path="/research/proactive-voice-agents"
+              element={<ProactiveVoiceAgents />}
+            />
           </Routes>
         </div>
       </div>
