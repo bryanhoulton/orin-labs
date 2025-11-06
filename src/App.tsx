@@ -26,8 +26,8 @@ const HEADER = {
   "/mission": "Mission",
   "/hiring": "Team",
   "/research": "Research",
-  "/research/proactive-agents": "Proactive Agents",
-  "/research/proactive-voice-agents": "Proactive Voice Agents",
+  "/research/proactive-agents": "Research",
+  "/research/proactive-voice-agents": "Research",
 };
 
 function App() {
