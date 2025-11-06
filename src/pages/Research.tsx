@@ -27,7 +27,7 @@ const RESEARCH_POSTS: ResearchPost[] = [
     title: "Building Proactive Voice Agents",
     description:
       "We explore how to build proactive voice agents that work independently of user input. By flipping the traditional voice pipeline, we create agents that can speak first, handle interruptions, and maintain natural conversation flow.",
-    date: "January 2025",
+    date: "November 2025",
     author: "Orin Labs",
     path: "/research/proactive-voice-agents",
   },
