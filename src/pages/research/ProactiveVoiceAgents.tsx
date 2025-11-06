@@ -21,7 +21,7 @@ export default function ProactiveVoiceAgents() {
         </h1>
         <div className="flex items-center gap-2">
           <Link to="/hiring">
-            <p className="text-lg text-primary underline">Acadia Engineering</p>
+            <p className="text-lg text-primary underline">Orin Labs</p>
           </Link>
           <p>•</p>
           <p className="text-gray-600">November 2025</p>
