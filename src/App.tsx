@@ -105,6 +105,9 @@ function App() {
                 <Link to="/" className="hover:underline">
                   Home
                 </Link>
+                <Link to="/research" className="hover:underline">
+                  Research
+                </Link>
                 <Link to="/mission" className="hover:underline">
                   Mission
                 </Link>
