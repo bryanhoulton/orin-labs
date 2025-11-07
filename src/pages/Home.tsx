@@ -16,7 +16,7 @@ export default function Home() {
         >
           believe
         </Link>{" "}
-        in a world <br /> where AI teaches humans.
+        in a world <br /> where humans aren't left behind.
       </h4>
 
       <hr className="my-12" />
