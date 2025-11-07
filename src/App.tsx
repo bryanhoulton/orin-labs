@@ -14,6 +14,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import Cofounder from './pages/Cofounder';
 import Hiring from './pages/Hiring';
 import Home from './pages/Home';
 import Mission from './pages/Mission';
@@ -28,6 +29,7 @@ const HEADER = {
   "/research": "Research",
   "/research/proactive-agents": "Research",
   "/research/proactive-voice-agents": "Research",
+  "/cofounder": "Cofounder Search",
 };
 
 function App() {
@@ -79,6 +81,7 @@ function App() {
             <Route path="/mission" element={<Mission />} />
             <Route path="/hiring" element={<Hiring />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/cofounder" element={<Cofounder />} />
             <Route
               path="/research/proactive-agents"
               element={<ProactiveAgents />}
