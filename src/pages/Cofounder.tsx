@@ -1,3 +1,5 @@
+import RocketshipGrowth from '../components/RocketshipGrowth';
+
 export default function Cofounder() {
   return (
     <>
@@ -26,25 +28,26 @@ export default function Cofounder() {
           down.
         </p>
 
+        <RocketshipGrowth />
+
         <h3 className="text-2xl font-semibold text-gray-900 mb-4">
           Requirements
         </h3>
-        <ul className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed list-disc list-inside">
-          <li>
+        <ul className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed list-disc list-outside ml-6">
+          <li className="pl-2">
             You want to build a{" "}
             <span className="text-primary">San Francisco</span>-based company of
             polymaths
           </li>
-          <li>
-            You are <span className="text-primary">highly technical</span> with
-            experience either training foundational models or building at-scale
-            AI infrastructure
+          <li className="pl-2">
+            You are <span className="text-primary">deeply technical</span> with
+            experience building application layer systems
           </li>
-          <li>
+          <li className="pl-2">
             You want to <span className="text-primary">ruthlessly</span> build a
             fast-growing company
           </li>
-          <li>
+          <li className="pl-2">
             You are comfortable with ambiguity, risk, and{" "}
             <span className="text-primary">non-consensus</span> bets
           </li>
