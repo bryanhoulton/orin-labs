@@ -30,9 +30,36 @@ export default function Cofounder() {
 
         <RocketshipGrowth />
 
-        <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-          Requirements
-        </h3>
+        <h3 className="text-2xl font-semibold text-gray-900 mb-4">About Me</h3>
+        <ul className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed list-disc list-outside ml-6">
+          <li className="pl-2">
+            Built <span className="text-primary">quant infrastructure</span> for
+            retail investors while in college.
+          </li>
+          <li className="pl-2">
+            <a
+              href="https://www.ycombinator.com/companies/manatee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline hover:text-primary-600 transition-colors"
+            >
+              Dropped out to do YC
+            </a>{" "}
+            and build distributed web-app caching and replay for sales demos
+            (acquihired in 2023)
+          </li>
+          <li className="pl-2">
+            Wrote the playbook on{" "}
+            <a
+              href="/research/proactive-agents"
+              className="text-primary underline hover:text-primary-600 transition-colors"
+            >
+              proactive agents
+            </a>
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 mb-4">About You</h3>
         <ul className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed list-disc list-outside ml-6">
           <li className="pl-2">
             You want to build a{" "}
