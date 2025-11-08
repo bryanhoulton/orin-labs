@@ -34,7 +34,7 @@ export default function Cofounder() {
         <ul className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed list-disc list-outside ml-6">
           <li className="pl-2">
             Built <span className="text-primary">quant infrastructure</span> for
-            retail investors while in college.
+            retail investors while in college
           </li>
           <li className="pl-2">
             <a
