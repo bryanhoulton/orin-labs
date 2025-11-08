@@ -58,7 +58,7 @@ export default function RocketshipGrowth() {
           margin={{
             top: 20,
             right: 100,
-            left: 0,
+            left: 5,
             bottom: -20,
           }}
         >
