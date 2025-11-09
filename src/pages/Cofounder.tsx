@@ -1,4 +1,4 @@
-import RocketshipGrowth from '../components/RocketshipGrowth';
+import RocketshipGrowth from "../components/RocketshipGrowth";
 
 export default function Cofounder() {
   return (
@@ -71,8 +71,7 @@ export default function Cofounder() {
             experience building application layer systems
           </li>
           <li className="pl-2">
-            You want to <span className="text-primary">ruthlessly</span> build a
-            fast-growing company
+            You like doing the hard & important things first
           </li>
           <li className="pl-2">
             You are comfortable with ambiguity, risk, and{" "}
