@@ -1,5 +1,5 @@
 import './index.css';
-import 'prismjs/themes/prism-tomorrow.css';
+import './styles/prism-custom.css';
 import 'prismjs';
 import 'prismjs/components/prism-python';
 import 'prismjs/components/prism-json';

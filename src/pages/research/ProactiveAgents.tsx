@@ -1,13 +1,15 @@
-import 'prismjs/components/prism-python';
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-json";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-import Prism from 'prismjs';
-import { Link } from 'react-router-dom';
+import Prism from "prismjs";
+import { Link } from "react-router-dom";
 
-import { JoinUs } from '../../components/Hiring';
-import MemoryDiagram from '../../components/MemoryDiagram';
-import ScalingChart from '../../components/ScalingChart';
+import CodeBlock from "../../components/CodeBlock";
+import { JoinUs } from "../../components/Hiring";
+import MemoryDiagram from "../../components/MemoryDiagram";
+import ScalingChart from "../../components/ScalingChart";
 
 export default function ProactiveAgents() {
   useEffect(() => {
@@ -15,22 +17,35 @@ export default function ProactiveAgents() {
   }, []);
 
   return (
-    <div className="grow w-full md:max-w-3xl research">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Building Proactive Agents
-        </h1>
-        <div className="flex items-center gap-2">
-          <Link to="/hiring">
-            <p className="text-lg text-primary underline">Orin Labs</p>
-          </Link>
-          <p>•</p>
-          <p className="text-gray-600">October 2025</p>
+    <div className="flex flex-col w-full items-center mt-8">
+      {/* Hero */}
+      <div className="bg-primary shadow-sm rounded-xl relative overflow-hidden aspect-video -mx-16 mb-8">
+        <img
+          src="/plane.png"
+          alt=""
+          style={{
+            filter: "invert(1) brightness(0.25)",
+            mixBlendMode: "color-dodge",
+          }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="relative p-16 flex flex-col justify-center h-full">
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Building Proactive Agents
+          </h1>
+          <div className="flex items-center gap-2 text-white/90">
+            <Link to="/">
+              <p className="text-lg underline hover:text-white transition-colors">
+                Orin Labs
+              </p>
+            </Link>
+            <p>•</p>
+            <p>October 2025</p>
+          </div>
         </div>
       </div>
 
-      <hr className="my-12" />
+      <hr />
 
       {/* Hook + Key Takeaways */}
       <section>
@@ -115,11 +130,10 @@ export default function ProactiveAgents() {
             The standard reactive agent architecture follows a simple,
             deterministic pattern:
           </p>
-          <pre>
-            <code className="language-python">
-              input event → LLM → workflows → output
-            </code>
-          </pre>
+          <CodeBlock
+            language="python"
+            code="input event → LLM → workflows → output"
+          />
           <p>
             This single-pass model breaks down when there's no external input.
             Without external input, the architecture has no way to take
@@ -137,13 +151,14 @@ export default function ProactiveAgents() {
                 click buttons. These systems have zero autonomous initiative and
                 lose all context between sessions.
               </p>
-              <pre>
-                <code className="language-python">{`def on_button_pressed(...):
+              <CodeBlock
+                language="python"
+                code={`def on_button_pressed(...):
     foo = workflow_part_1(...)
     bar = workflow_part_2(foo)
     baz = workflow_part_3(bar)
-    return baz`}</code>
-              </pre>
+    return baz`}
+              />
             </div>
 
             <div>
@@ -156,12 +171,13 @@ export default function ProactiveAgents() {
                 workflows, wastes resources by constantly checking for work, and
                 still follows rigid, predetermined patterns.
               </p>
-              <pre>
-                <code className="language-python">{`def run_every_hour(...): # runs 0 * * * *
+              <CodeBlock
+                language="python"
+                code={`def run_every_hour(...): # runs 0 * * * *
     lessons = get_upcoming_lessons() # in next hour
     for lesson in lessons:
-        lesson.plan() # another LLM call to plan the lesson`}</code>
-              </pre>
+        lesson.plan() # another LLM call to plan the lesson`}
+              />
             </div>
 
             <div>
@@ -174,14 +190,15 @@ export default function ProactiveAgents() {
                 for the job, it is still limited to a fixed set of pre-built
                 workflows to select from.
               </p>
-              <pre>
-                <code className="language-python">{`def run_every_hour(...) # runs 0 * * * *
+              <CodeBlock
+                language="python"
+                code={`def run_every_hour(...) # runs 0 * * * *
     for user in db.get_users()
         context = user.gather_context()
         workflows = decide_workflows_with_llm(context)
         for workflow in workflows:
-            workflow.run()`}</code>
-              </pre>
+            workflow.run()`}
+              />
             </div>
 
             <div>
@@ -195,8 +212,9 @@ export default function ProactiveAgents() {
                 running inference on every beat, even when there is no work to
                 be done.
               </p>
-              <pre>
-                <code className="language-python">{`def run_agent(user):
+              <CodeBlock
+                language="python"
+                code={`def run_agent(user):
     context = user.gather_context()
     done = False
     history = []
@@ -207,8 +225,8 @@ export default function ProactiveAgents() {
 
 def run_every_hour(...) # runs 0 * * * *
     for user in db.get_users():
-        run_agent(user)`}</code>
-              </pre>
+        run_agent(user)`}
+              />
             </div>
           </div>
 
@@ -232,11 +250,10 @@ def run_every_hour(...) # runs 0 * * * *
             to be able to schedule itself. After completing a workflow, the
             agent decides when it should wake up next:
           </p>
-          <pre>
-            <code className="language-python">
-              next_wake = LLM.decide_sleep_duration(context)
-            </code>
-          </pre>
+          <CodeBlock
+            language="python"
+            code="next_wake = LLM.decide_sleep_duration(context)"
+          />
           <p>
             With this approach, a simple cron job can wake agents whose sleep
             time has expired—similar to how operating systems handle timer
@@ -249,10 +266,11 @@ def run_every_hour(...) # runs 0 * * * *
             this, we added <strong>wake events</strong>—signals that immediately
             wake up sleeping agents when something important happens:
           </p>
-          <pre>
-            <code className="language-python">{`if event in WakeEvents:
-    wake(agent)`}</code>
-          </pre>
+          <CodeBlock
+            language="python"
+            code={`if event in WakeEvents:
+    wake(agent)`}
+          />
           <p>
             This hybrid model combines{" "}
             <strong>
@@ -264,8 +282,9 @@ def run_every_hour(...) # runs 0 * * * *
             computation sublinearly.
           </p>
 
-          <pre>
-            <code className="language-python">{`def run_agent(user):
+          <CodeBlock
+            language="python"
+            code={`def run_agent(user):
     # ... everything from before ...
 
 def wake_agent(user):
@@ -276,16 +295,17 @@ def wake_agent(user):
 def run_every_min(...) # runs * * * * *
     for user in db.get_users()
         if time.now() > user.agent_sleep_until:
-            wake_agent(user)`}</code>
-          </pre>
+            wake_agent(user)`}
+          />
 
           <p>Asynchronous events provide preemptive activation mechanisms:</p>
 
-          <pre>
-            <code className="language-python">{`def message_webhook(...): # called on external messages
+          <CodeBlock
+            language="python"
+            code={`def message_webhook(...): # called on external messages
     user = user_from_identifier(...)
-    wake_agent(user)`}</code>
-          </pre>
+    wake_agent(user)`}
+          />
         </div>
       </section>
 
@@ -441,8 +461,9 @@ def run_every_min(...) # runs * * * * *
             patterns encountered in their training data.
           </p>
           <p>Consider these functionally equivalent schemas:</p>
-          <pre>
-            <code className="language-json">{`{
+          <CodeBlock
+            language="json"
+            code={`{
   "name": "email_list_operation",
   "schema": {
     "type": "object",
@@ -453,11 +474,12 @@ def run_every_min(...) # runs * * * * *
       }
     }
   }
-}`}</code>
-          </pre>
+}`}
+          />
           <p>versus:</p>
-          <pre>
-            <code className="language-json">{`{
+          <CodeBlock
+            language="json"
+            code={`{
   "name": "check_email_inbox", 
   "schema": {
     "type": "object",
@@ -468,8 +490,8 @@ def run_every_min(...) # runs * * * * *
       }
     }
   }
-}`}</code>
-          </pre>
+}`}
+          />
           <p>
             The second schema uses language patterns closer to everyday
             phrasing— making it more likely the model "knows how" to use the

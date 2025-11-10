@@ -119,7 +119,7 @@ export default function ScalingChart() {
             <Line
               type="monotone"
               dataKey="onlyShortTerm"
-              stroke="#dc2626"
+              stroke="#000000"
               strokeWidth={3}
               name="only short term: O(N) fast"
               dot={false}
@@ -127,7 +127,7 @@ export default function ScalingChart() {
             <Line
               type="monotone"
               dataKey="withLongTerm"
-              stroke="#2563eb"
+              stroke="#00845e"
               strokeWidth={3}
               name="with long term: O(N) slow"
               dot={false}
@@ -135,7 +135,7 @@ export default function ScalingChart() {
             <Line
               type="monotone"
               dataKey="withVariable"
-              stroke="#ca8a04"
+              stroke="#8be0c3"
               strokeWidth={3}
               name="with variable: O(log N)"
               dot={false}
