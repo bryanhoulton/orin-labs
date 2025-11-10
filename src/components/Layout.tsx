@@ -103,7 +103,7 @@ export default function Layout({ children }: LayoutProps) {
 
           <div className="flex items-center gap-2">
             <a
-              href="https://x.com/orinlabs"
+              href="https://x.com/0rinlabs"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-500 transition-colors cursor-pointer"
@@ -111,7 +111,7 @@ export default function Layout({ children }: LayoutProps) {
               <TwitterIcon className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com/in/orinlabs"
+              href="https://www.linkedin.com/company/104572054/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-500 transition-colors cursor-pointer"
