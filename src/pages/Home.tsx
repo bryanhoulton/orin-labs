@@ -13,17 +13,16 @@ const initiatives: Initiative[] = [
   {
     title: "Proactivity",
     description:
-      "Great teachers don't wait to be asked—they anticipate needs, check in at the right moments, and guide students through their journey. We're building AI that takes initiative, schedules itself, and knows when to reach out, creating relationships that persist beyond individual conversations.",
+      "Agents that control when they run, creating truly proactive experiences.",
   },
   {
-    title: "Temporal Memory",
-    description:
-      "Human learning happens over months and years, not single sessions. Our memory systems compress and evolve context across time, maintaining coherent understanding of progress, struggles, and breakthroughs—enabling AI that truly remembers and grows with each learner.",
+    title: "Memory",
+    description: "Agents that remember temporally, not just facts.",
   },
   {
-    title: "Adaptive Learning",
+    title: "Delivery",
     description:
-      "Every student learns differently, at their own pace, with unique strengths and challenges. We're developing systems that continuously adapt their teaching approach, pacing, and content based on real-time understanding of each individual's learning patterns and needs.",
+      "Agents trained to curate the perfect instructional experience for you.",
   },
 ];
 
