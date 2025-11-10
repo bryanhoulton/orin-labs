@@ -1,11 +1,12 @@
-import 'prismjs/components/prism-python';
+import "prismjs/components/prism-python";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-import Prism from 'prismjs';
-import { Link } from 'react-router-dom';
+import Prism from "prismjs";
+import { Link } from "react-router-dom";
 
-import { JoinUs } from '../../components/Hiring';
+import CodeBlock from "../../components/CodeBlock";
+import { JoinUs } from "../../components/Hiring";
 
 export default function ProactiveVoiceAgents() {
   useEffect(() => {
@@ -13,22 +14,33 @@ export default function ProactiveVoiceAgents() {
   }, []);
 
   return (
-    <div className="grow w-full md:max-w-3xl research">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Building Proactive Voice Agents
-        </h1>
-        <div className="flex items-center gap-2">
-          <Link to="/hiring">
-            <p className="text-lg text-primary underline">Orin Labs</p>
-          </Link>
-          <p>•</p>
-          <p className="text-gray-600">November 2025</p>
+    <div className="flex flex-col w-full items-center mt-8 gap-12">
+      {/* Hero */}
+      <div className="bg-primary shadow-sm rounded-xl relative overflow-hidden aspect-video w-full -mx-16 mb-8">
+        <img
+          src="/person.png"
+          alt=""
+          style={{
+            filter: "invert(1) brightness(0.40)",
+            mixBlendMode: "screen",
+          }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="relative p-16 flex flex-col justify-center h-full">
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Conversationality
+          </h1>
+          <div className="flex items-center gap-2 text-white/90">
+            <Link to="/">
+              <p className="text-lg underline hover:text-white transition-colors">
+                Orin Labs
+              </p>
+            </Link>
+            <p>•</p>
+            <p>November 2025</p>
+          </div>
         </div>
       </div>
-
-      <hr className="my-12" />
 
       {/* Hook + Key Takeaways */}
       <section>
@@ -71,8 +83,6 @@ export default function ProactiveVoiceAgents() {
         </div>
       </section>
 
-      <hr className="my-12" />
-
       {/* Introduction */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -106,8 +116,6 @@ export default function ProactiveVoiceAgents() {
           </p>
         </div>
       </section>
-
-      <hr className="my-12" />
 
       {/* Traditional Voice Agent */}
       <section>
@@ -151,8 +159,6 @@ export default function ProactiveVoiceAgents() {
         </div>
       </section>
 
-      <hr className="my-12" />
-
       {/* Classic Pipeline + Silence Words */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -171,8 +177,9 @@ export default function ProactiveVoiceAgents() {
             a minute. But if they aren't responding to a simple conversational
             question, we might want to wait 10 seconds.
           </p>
-          <pre>
-            <code className="language-python">{`last_stt_time = now()
+          <CodeBlock
+            language="python"
+            code={`last_stt_time = now()
 
 def on_user_speech(user, audio_chunks):
     new_words = speech_to_text(audio_chunks)
@@ -183,12 +190,10 @@ def on_user_speech(user, audio_chunks):
 
 while True:
     if now() - last_stt_time > 30:  # seconds
-        user.play_audio("Hello?")`}</code>
-          </pre>
+        user.play_audio("Hello?")`}
+          />
         </div>
       </section>
-
-      <hr className="my-12" />
 
       {/* Classic Pipeline + Silence Triggers */}
       <section>
@@ -200,16 +205,17 @@ while True:
             The only way to make contextual decisions about silence is to use
             the conversation itself. So, we can have an LLM decide what to do:
           </p>
-          <pre>
-            <code className="language-python">{`last_stt_time = now()
+          <CodeBlock
+            language="python"
+            code={`last_stt_time = now()
 
 def on_user_speech(user, audio_chunks):
     ...
 
 while True:
     if now() - last_stt_time > 30:  # seconds
-        llm_decide_what_to_do()`}</code>
-          </pre>
+        llm_decide_what_to_do()`}
+          />
           <p>
             Maybe the LLM will decide to play one of the re-engagement audio
             prompts like "Hey, are you still there?", and maybe the agent will
@@ -223,8 +229,6 @@ while True:
         </div>
       </section>
 
-      <hr className="my-12" />
-
       {/* Flipped Pipeline */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -236,8 +240,9 @@ while True:
             agent from the user input. Even without user input, the agent is
             going to run! Let's take this to the extreme and see what happens:
           </p>
-          <pre>
-            <code className="language-python">{`context = new Context()
+          <CodeBlock
+            language="python"
+            code={`context = new Context()
 tools = [speak, ...]
 
 def speak(words):
@@ -250,8 +255,8 @@ def on_user_speech(user, audio_chunks):
 
 while True:
     resp = llm.call(context, tools)
-    context.add(resp)`}</code>
-          </pre>
+    context.add(resp)`}
+          />
           <p>
             Now we've fully separated the agent from the user. The agent runs
             even if no one is on the call. This has clear advantages:
@@ -274,8 +279,6 @@ while True:
         </div>
       </section>
 
-      <hr className="my-12" />
-
       {/* Flipped Pipeline + Wait */}
       <section>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -283,8 +286,9 @@ while True:
         </h2>
         <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
           <p>To fix this, let's give the agent the ability to wait.</p>
-          <pre>
-            <code className="language-python">{`context = new Context()
+          <CodeBlock
+            language="python"
+            code={`context = new Context()
 tools = [speak, wait, ...]
 
 def speak(words):
@@ -300,8 +304,8 @@ def on_user_speech(user, audio_chunks):
 
 while True:
     resp = llm.call(context, tools)
-    context.add(resp)`}</code>
-          </pre>
+    context.add(resp)`}
+          />
           <p>
             Now the agent can wait. With simple prompting, it will speak, wait,
             check in with the user, and even handle tasks while the user speaks.
@@ -315,8 +319,6 @@ while True:
           <p>These become challenges.</p>
         </div>
       </section>
-
-      <hr className="my-12" />
 
       {/* Flipped Pipeline + Wait + Barge-in */}
       <section>
@@ -347,8 +349,6 @@ while True:
           </p>
         </div>
       </section>
-
-      <hr className="my-12" />
 
       {/* Limitations and Tradeoffs */}
       <section>
@@ -395,8 +395,6 @@ while True:
           </ul>
         </div>
       </section>
-
-      <hr className="my-12" />
 
       {/* Streaming */}
       <section>
@@ -445,8 +443,6 @@ while True:
           </p>
         </div>
       </section>
-
-      <hr className="my-12" />
 
       <JoinUs />
     </div>

@@ -1,7 +1,13 @@
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown } from "lucide-react";
 
 interface MemoryBlockProps {
-  color: "red" | "orange" | "green" | "blue" | "purple" | "pink";
+  color:
+    | "primary-50"
+    | "primary-100"
+    | "primary-200"
+    | "primary-300"
+    | "primary-400"
+    | "primary-500";
   colSpan: number;
   height?: string;
   children: React.ReactNode;
@@ -15,12 +21,12 @@ function MemoryBlock({
   children,
 }: MemoryBlockProps) {
   const colorClasses = {
-    red: "bg-red-200 border-red-400 text-red-800",
-    orange: "bg-orange-200 border-orange-400 text-orange-800",
-    green: "bg-green-200 border-green-400 text-green-800",
-    blue: "bg-blue-200 border-blue-400 text-blue-800",
-    purple: "bg-purple-200 border-purple-400 text-purple-800",
-    pink: "bg-pink-200 border-pink-400 text-pink-800",
+    "primary-50": "bg-primary-50 text-primary-700",
+    "primary-100": "bg-primary-100 text-primary-700",
+    "primary-200": "bg-primary-200 text-primary-800",
+    "primary-300": "bg-primary-300 text-primary-900",
+    "primary-400": "bg-primary-400 text-primary-900",
+    "primary-500": "bg-primary-500 text-white",
   };
 
   const colSpans = {
@@ -39,8 +45,7 @@ function MemoryBlock({
   };
   const colSpanValue = colSpan as keyof typeof colSpans;
 
-  const borderWidth = "border-2";
-  const classes = `${colSpans[colSpanValue]} ${height} ${colorClasses[color]} ${borderWidth} rounded flex items-center text-xs md:text-sm justify-center min-w-fit`;
+  const classes = `${colSpans[colSpanValue]} ${height} ${colorClasses[color]} rounded flex items-center text-xs md:text-sm justify-center min-w-fit`;
 
   return <div className={classes}>{children}</div>;
 }
@@ -50,37 +55,37 @@ export default function MemoryDiagram() {
     <div className="my-8 p-6 bg-gray-50 rounded-lg border">
       {/* Memory Grid - Top Section */}
       <div className="grid grid-cols-12 gap-1 mb-4">
-        <MemoryBlock color="red" colSpan={2}>
+        <MemoryBlock color="primary-50" colSpan={2}>
           Monthly
         </MemoryBlock>
 
         <div className="col-span-10"></div>
 
-        <MemoryBlock color="orange" colSpan={4}>
+        <MemoryBlock color="primary-100" colSpan={4}>
           Weekly
         </MemoryBlock>
 
         <div className="col-span-8"></div>
 
-        <MemoryBlock color="green" colSpan={6}>
+        <MemoryBlock color="primary-200" colSpan={6}>
           Daily
         </MemoryBlock>
 
         <div className="col-span-6"></div>
 
-        <MemoryBlock color="blue" colSpan={8}>
+        <MemoryBlock color="primary-300" colSpan={8}>
           Hourly
         </MemoryBlock>
 
         <div className="col-span-4"></div>
 
-        <MemoryBlock color="purple" colSpan={10}>
+        <MemoryBlock color="primary-400" colSpan={10}>
           N-minute
         </MemoryBlock>
 
         <div className="col-span-2"></div>
 
-        <MemoryBlock color="pink" colSpan={12}>
+        <MemoryBlock color="primary-500" colSpan={12}>
           Actual messages
         </MemoryBlock>
       </div>
@@ -100,22 +105,22 @@ export default function MemoryDiagram() {
       {/* Context Grid - Bottom Section */}
       <div className="mb-4">
         <div className="grid grid-cols-12 gap-1 mb-4">
-          <MemoryBlock color="red" colSpan={2}>
+          <MemoryBlock color="primary-50" colSpan={2}>
             Monthly
           </MemoryBlock>
-          <MemoryBlock color="orange" colSpan={2}>
+          <MemoryBlock color="primary-100" colSpan={2}>
             Weekly
           </MemoryBlock>
-          <MemoryBlock color="green" colSpan={2}>
+          <MemoryBlock color="primary-200" colSpan={2}>
             Daily
           </MemoryBlock>
-          <MemoryBlock color="purple" colSpan={2}>
+          <MemoryBlock color="primary-300" colSpan={2}>
             Hourly
           </MemoryBlock>
-          <MemoryBlock color="blue" colSpan={2}>
+          <MemoryBlock color="primary-400" colSpan={2}>
             Minute
           </MemoryBlock>
-          <MemoryBlock color="pink" colSpan={2}>
+          <MemoryBlock color="primary-500" colSpan={2}>
             Messages
           </MemoryBlock>
         </div>
