@@ -24,8 +24,8 @@ export default function ProactiveAgents() {
           src="/plane.png"
           alt=""
           style={{
-            filter: "invert(1) brightness(0.25)",
-            mixBlendMode: "color-dodge",
+            filter: "invert(1) brightness(0.40)",
+            mixBlendMode: "screen",
           }}
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -120,9 +120,9 @@ export default function Home() {
           muted
           playsInline
           style={{
-            filter: "invert(1) brightness(0.15)",
+            filter: "invert(1) brightness(0.40)",
             translate: "0 64px",
-            mixBlendMode: "color-dodge",
+            mixBlendMode: "screen",
           }}
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -195,8 +195,8 @@ export default function Home() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
                   style={{
                     backgroundImage: `url(${item.image})`,
-                    filter: "invert(1) brightness(0.25)",
-                    mixBlendMode: "color-dodge",
+                    filter: "invert(1) brightness(0.40)",
+                    mixBlendMode: "screen",
                   }}
                 />
 
