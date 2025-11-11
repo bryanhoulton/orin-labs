@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { ArrowRight, LinkedinIcon, Menu, TwitterIcon, X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -37,21 +37,38 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Handle hash scrolling when the component mounts or location changes
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 0);
+      }
+    }
+  }, []);
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     path: string
   ) => {
     if (path.includes("#")) {
-      e.preventDefault();
       const hash = path.split("#")[1];
-      if (hash) {
-        const element = document.getElementById(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+      const element = document.getElementById(hash);
+
+      // If element exists on current page, scroll to it
+      if (element) {
+        e.preventDefault();
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        setIsMenuOpen(false);
       }
+      // If not on home page, let the link navigate (React Router will handle it)
+      // and the scroll will happen via the hash in the URL
+    } else {
+      setIsMenuOpen(false);
     }
-    setIsMenuOpen(false);
   };
 
   return (

@@ -13,7 +13,9 @@ import ScalingChart from "../../components/ScalingChart";
 
 const SECTION_CLASS = "w-full max-w-3xl px-4 sm:px-0";
 const PROSE_CLASS =
-  "prose prose-base sm:prose-lg text-gray-700 leading-relaxed space-y-4 max-w-none";
+  "prose prose-base sm:prose-lg text-neutral-700 dark:text-neutral-200 dark:prose-invert leading-relaxed space-y-4 max-w-none";
+const SECTION_HEADING_CLASS =
+  "text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4";
 
 export default function ProactiveAgents() {
   useEffect(() => {
@@ -94,7 +96,7 @@ export default function ProactiveAgents() {
 
       {/* Introduction */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Introduction
         </h2>
         <div className={PROSE_CLASS}>
@@ -126,7 +128,7 @@ export default function ProactiveAgents() {
 
       {/* Limitations */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Limitations of Reactive Architectures
         </h2>
         <div className={PROSE_CLASS}>
@@ -147,7 +149,7 @@ export default function ProactiveAgents() {
 
           <div className="space-y-6 mt-6">
             <div>
-              <p className="text-xl font-medium text-gray-900 mb-2">
+              <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-2">
                 User-Triggered Static Workflows
               </p>
               <p>
@@ -166,7 +168,7 @@ export default function ProactiveAgents() {
             </div>
 
             <div>
-              <p className="text-xl font-medium text-gray-900 mb-2">
+              <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-2">
                 Beat-Scheduled Static Workflows
               </p>
               <p>
@@ -185,7 +187,7 @@ export default function ProactiveAgents() {
             </div>
 
             <div>
-              <p className="text-xl font-medium text-gray-900 mb-2">
+              <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-2">
                 Beat-Schedule + LLM-Selected Workflows
               </p>
               <p>
@@ -206,7 +208,7 @@ export default function ProactiveAgents() {
             </div>
 
             <div>
-              <p className="text-xl font-medium text-gray-900 mb-2">
+              <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-2">
                 Beat-Schedule + LLM with Tools
               </p>
               <p>
@@ -245,7 +247,7 @@ def run_every_hour(...) # runs 0 * * * *
 
       {/* Self-Scheduling */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Self-Scheduling and Wake Events
         </h2>
         <div className={PROSE_CLASS}>
@@ -317,7 +319,7 @@ def run_every_min(...) # runs * * * * *
 
       {/* Temporal Memory */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Decaying-Resolution Memory
         </h2>
         <div className={PROSE_CLASS}>
@@ -338,7 +340,7 @@ def run_every_min(...) # runs * * * * *
           </p>
 
           <div className="mt-6">
-            <p className="text-xl font-medium text-gray-900 mb-3">
+            <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-3">
               <strong>Memory Hierarchy</strong>
             </p>
             <p>
@@ -356,7 +358,7 @@ def run_every_min(...) # runs * * * * *
           </div>
 
           <div className="mt-6">
-            <p className="text-xl font-medium text-gray-900 mb-3">
+            <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-3">
               <strong>Scaling Behavior</strong>
             </p>
             <p>
@@ -368,7 +370,7 @@ def run_every_min(...) # runs * * * * *
 
             <ScalingChart />
 
-            <div className="mt-4 text-sm text-gray-600">
+            <div className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
               Decaying-Resolution Memory scales approximately O(log N),
               providing significant efficiency gains over other naive O(N)
               methods.
@@ -376,7 +378,7 @@ def run_every_min(...) # runs * * * * *
           </div>
 
           <div className="mt-6">
-            <p className="text-xl font-medium text-gray-900 mb-3">
+            <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-3">
               <strong>Semantic Fidelity</strong>
             </p>
             <p>
@@ -396,7 +398,7 @@ def run_every_min(...) # runs * * * * *
           </div>
 
           <div className="mt-6">
-            <p className="text-xl font-medium text-gray-900 mb-3">
+            <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-3">
               <strong>Ledger-Based Memory Architecture</strong>
             </p>
             <p>
@@ -423,7 +425,7 @@ def run_every_min(...) # runs * * * * *
 
       {/* Tool Semantics */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Stateful Tools as Memory
         </h2>
         <div className={PROSE_CLASS}>
@@ -454,7 +456,7 @@ def run_every_min(...) # runs * * * * *
           </p>
 
           <hr />
-          <p className="text-xl font-medium text-gray-900 mb-3 mt-6">
+          <p className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-3 mt-6">
             <strong>Naming Tools</strong>
           </p>
           <p>
@@ -509,21 +511,21 @@ def run_every_min(...) # runs * * * * *
           </p>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <code className="bg-gray-100 px-2 py-1 rounded">
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">
                 read_message_inbox
               </code>
               ,{" "}
-              <code className="bg-gray-100 px-2 py-1 rounded">
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">
                 send_message
               </code>
             </li>
             <li>
-              <code className="bg-gray-100 px-2 py-1 rounded">
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">
                 manage_calendar_events
               </code>
             </li>
             <li>
-              <code className="bg-gray-100 px-2 py-1 rounded">
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">
                 update_contact_book
               </code>
             </li>
@@ -540,7 +542,7 @@ def run_every_min(...) # runs * * * * *
 
       {/* Evaluation */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Evaluation and Open Challenges
         </h2>
         <div className={PROSE_CLASS}>
@@ -569,7 +571,7 @@ def run_every_min(...) # runs * * * * *
 
       {/* Limitations */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Limitations
         </h2>
         <div className={PROSE_CLASS}>
@@ -605,7 +607,7 @@ def run_every_min(...) # runs * * * * *
 
       {/* Conclusion */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Conclusion
         </h2>
         <div className={PROSE_CLASS}>

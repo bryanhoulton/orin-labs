@@ -1,8 +1,7 @@
-/* Custom Prism.js theme for Orin Labs - using primary teal colors */
+/* Custom Prism.js theme for Orin Labs - using primary teal colors with dark mode support */
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: var(--neutral-900);
   background: none;
   font-family: "Fira Code", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono",
     monospace;
@@ -22,6 +21,12 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
+/* Dark mode text color */
+.dark code[class*="language-"],
+.dark pre[class*="language-"] {
+  color: var(--neutral-100);
+}
+
 pre[class*="language-"] {
   padding: 1.5rem;
   margin: 0;
@@ -30,6 +35,12 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
+  background: var(--primary-50);
+}
+
+/* Dark mode background */
+.dark :not(pre) > code[class*="language-"],
+.dark pre[class*="language-"] {
   background: var(--primary-50);
 }
 
@@ -49,8 +60,20 @@ pre[class*="language-"] {
   font-style: italic;
 }
 
+.dark .token.comment,
+.dark .token.prolog,
+.dark .token.doctype,
+.dark .token.cdata {
+  color: var(--neutral-400);
+  font-style: italic;
+}
+
 .token.punctuation {
   color: var(--neutral-600);
+}
+
+.dark .token.punctuation {
+  color: var(--neutral-300);
 }
 
 .token.namespace {
@@ -65,9 +88,22 @@ pre[class*="language-"] {
   color: var(--error-700);
 }
 
+.dark .token.property,
+.dark .token.tag,
+.dark .token.constant,
+.dark .token.symbol,
+.dark .token.deleted {
+  color: var(--error-400);
+}
+
 .token.boolean,
 .token.number {
   color: var(--warning-600);
+}
+
+.dark .token.boolean,
+.dark .token.number {
+  color: var(--warning-400);
 }
 
 .token.selector,
@@ -79,6 +115,15 @@ pre[class*="language-"] {
   color: var(--primary-600);
 }
 
+.dark .token.selector,
+.dark .token.attr-name,
+.dark .token.string,
+.dark .token.char,
+.dark .token.builtin,
+.dark .token.inserted {
+  color: var(--primary-400);
+}
+
 .token.operator,
 .token.entity,
 .token.url,
@@ -88,10 +133,25 @@ pre[class*="language-"] {
   color: var(--neutral-700);
 }
 
+.dark .token.operator,
+.dark .token.entity,
+.dark .token.url,
+.dark .language-css .token.string,
+.dark .style .token.string,
+.dark .token.variable {
+  color: var(--neutral-200);
+}
+
 .token.atrule,
 .token.attr-value,
 .token.class-name {
   color: var(--primary-700);
+}
+
+.dark .token.atrule,
+.dark .token.attr-value,
+.dark .token.class-name {
+  color: var(--primary-300);
 }
 
 /* Function calls - brighter than function definitions */
@@ -99,13 +159,26 @@ pre[class*="language-"] {
   color: var(--primary-500);
 }
 
+.dark .token.function {
+  color: var(--primary-300);
+}
+
 .token.keyword {
   color: var(--primary-400);
+}
+
+.dark .token.keyword {
+  color: var(--primary-200);
 }
 
 .token.regex,
 .token.important {
   color: var(--warning-700);
+}
+
+.dark .token.regex,
+.dark .token.important {
+  color: var(--warning-300);
 }
 
 .token.important,
@@ -139,6 +212,10 @@ pre[data-line] {
   white-space: pre;
 }
 
+.dark .line-highlight {
+  background: color-mix(in srgb, var(--primary-500) 15%, transparent);
+}
+
 /* Line numbers */
 pre.line-numbers {
   position: relative;
@@ -166,6 +243,10 @@ pre.line-numbers > code {
   user-select: none;
 }
 
+.dark .line-numbers .line-numbers-rows {
+  border-right-color: var(--primary-800);
+}
+
 .line-numbers-rows > span {
   display: block;
   counter-increment: linenumber;
@@ -177,4 +258,8 @@ pre.line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
+}
+
+.dark .line-numbers-rows > span:before {
+  color: var(--primary-400);
 }
