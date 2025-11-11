@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { ArrowDown } from "lucide-react";
 
 interface MemoryBlockProps {
@@ -22,12 +21,18 @@ function MemoryBlock({
   children,
 }: MemoryBlockProps) {
   const colorClasses = {
-    "primary-50": "bg-primary-50 dark:bg-primary-900 text-primary-700 dark:text-primary-200",
-    "primary-100": "bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-200",
-    "primary-200": "bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-100",
-    "primary-300": "bg-primary-300 dark:bg-primary-600 text-primary-900 dark:text-primary-100",
-    "primary-400": "bg-primary-400 dark:bg-primary-500 text-primary-900 dark:text-white",
-    "primary-500": "bg-primary-500 dark:bg-primary-400 text-white dark:text-primary-900",
+    "primary-50":
+      "bg-primary-50 dark:bg-primary-900 text-primary-700 dark:text-primary-200",
+    "primary-100":
+      "bg-primary-100 dark:bg-primary-800 text-primary-700 dark:text-primary-200",
+    "primary-200":
+      "bg-primary-200 dark:bg-primary-700 text-primary-800 dark:text-primary-100",
+    "primary-300":
+      "bg-primary-300 dark:bg-primary-600 text-primary-900 dark:text-primary-100",
+    "primary-400":
+      "bg-primary-400 dark:bg-primary-500 text-primary-900 dark:text-white",
+    "primary-500":
+      "bg-primary-500 dark:bg-primary-400 text-white dark:text-primary-900",
   };
 
   const colSpans = {
@@ -52,17 +57,6 @@ function MemoryBlock({
 }
 
 export default function MemoryDiagram() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    setIsDark(document.documentElement.classList.contains('dark'));
-    const observer = new MutationObserver(() => {
-      setIsDark(document.documentElement.classList.contains('dark'));
-    });
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="my-8 p-6 bg-neutral-50 dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800">
       {/* Memory Grid - Top Section */}
