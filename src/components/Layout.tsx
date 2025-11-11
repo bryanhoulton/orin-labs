@@ -20,7 +20,7 @@ function ContactButton({ className }: { className?: string }) {
       rel="noopener noreferrer"
       className={cn(
         "bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-400 transition-colors cursor-pointer",
-        "flex items-center w-fit justify-center gap-2 shadow-sm md:w-full text-sm sm:text-base",
+        "flex items-center w-fit justify-center gap-2 shadow-sm text-sm sm:text-base",
         className
       )}
     >
@@ -106,7 +106,7 @@ export default function Layout({ children }: LayoutProps) {
               to={item.path}
               key={item.path}
               onClick={(e) => handleNavClick(e, item.path)}
-              className="text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+              className="text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors w-fit shrink-0"
             >
               {item.label}
             </Link>
