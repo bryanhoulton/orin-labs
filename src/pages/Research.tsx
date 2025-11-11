@@ -38,15 +38,15 @@ export default function Research() {
     <>
       {/* Header */}
       <div className="mb-12">
-        <h1 className="text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">Research</h1>
-        <p className="text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
+        <h1 className="text-3xl sm:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-4">Research</h1>
+        <p className="text-base sm:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Exploring the frontiers of AI agents, autonomous systems, and the
           future of human-computer interaction.
         </p>
       </div>
 
       {/* Research Posts */}
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {RESEARCH_POSTS.map((post) => (
           <article
             key={post.id}
@@ -54,14 +54,14 @@ export default function Research() {
           >
             <Link
               to={post.path}
-              className="block group hover:bg-neutral-200 dark:hover:bg-neutral-800 -m-4 p-4 rounded-lg transition-colors"
+              className="block group hover:bg-neutral-200 dark:hover:bg-neutral-800 -m-3 sm:-m-4 p-3 sm:p-4 rounded-lg transition-colors"
             >
               <div className="flex flex-col space-y-4">
                 <div>
-                  <h2 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-primary transition-colors mb-2">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-primary transition-colors mb-2">
                     {post.title}
                   </h2>
-                  <div className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+                  <div className="flex flex-wrap items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
                     <Link
                       to="/"
                       className="text-primary underline hover:no-underline"
@@ -72,7 +72,7 @@ export default function Research() {
                     <span>{post.date}</span>
                   </div>
                 </div>
-                <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm sm:text-base">
                   {post.description}
                 </p>
                 <div className="flex items-center gap-1 text-primary font-medium">

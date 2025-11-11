@@ -25,7 +25,7 @@ export function Hiring() {
   };
 
   return (
-    <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
+    <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
       We are{" "}
       <Link
         to="/#join-us"
@@ -43,8 +43,8 @@ export function Hiring() {
 export function JoinUs() {
   return (
     <div className="flex flex-col items-start w-full">
-      <h2 className="text-3xl font-semibold text-gray-900 mb-4">Join Us</h2>
-      <p className="text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">Join Us</h2>
+      <p className="text-base sm:text-lg text-gray-600 mb-6 max-w-2xl leading-relaxed">
         We are a small, San Francisco-based research lab focused on making AI
         that teaches humans. We are building AI that solves real problems for
         real people.

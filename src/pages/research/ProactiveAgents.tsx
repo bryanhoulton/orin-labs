@@ -11,15 +11,19 @@ import { JoinUs } from "../../components/Hiring";
 import MemoryDiagram from "../../components/MemoryDiagram";
 import ScalingChart from "../../components/ScalingChart";
 
+const SECTION_CLASS = "w-full max-w-3xl px-4 sm:px-0";
+const PROSE_CLASS =
+  "prose prose-base sm:prose-lg text-gray-700 leading-relaxed space-y-4 max-w-none";
+
 export default function ProactiveAgents() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
   return (
-    <div className="flex flex-col w-full items-center mt-8">
+    <div className="flex flex-col w-full items-center mt-6 sm:mt-8 gap-10 sm:gap-12">
       {/* Hero */}
-      <div className="bg-primary shadow-sm rounded-xl relative overflow-hidden aspect-video -mx-16 mb-8">
+      <div className="bg-primary shadow-sm rounded-xl relative overflow-hidden -mx-4 sm:-mx-8 lg:-mx-16 aspect-[4/3] sm:aspect-video w-full">
         <img
           src="/plane.png"
           alt=""
@@ -29,13 +33,13 @@ export default function ProactiveAgents() {
           }}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative p-16 flex flex-col justify-center h-full">
-          <h1 className="text-6xl font-bold text-white mb-6">
+        <div className="relative px-8 py-12 sm:p-12 lg:p-16 flex flex-col justify-center h-full gap-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
             Building Proactive Agents
           </h1>
-          <div className="flex items-center gap-2 text-white/90">
+          <div className="flex flex-wrap items-center gap-2 text-white/90 text-sm sm:text-base">
             <Link to="/">
-              <p className="text-lg underline hover:text-white transition-colors">
+              <p className="underline hover:text-white transition-colors">
                 Orin Labs
               </p>
             </Link>
@@ -45,15 +49,15 @@ export default function ProactiveAgents() {
         </div>
       </div>
 
-      <hr />
+      <hr className={SECTION_CLASS} />
 
       {/* Hook + Key Takeaways */}
-      <section>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
-          <p className="text-lg">
+      <section className={SECTION_CLASS}>
+        <div className={PROSE_CLASS}>
+          <p className="text-base sm:text-lg">
             Most agents only react. If you don’t prompt them, they do nothing.
           </p>
-          <p className="text-lg">
+          <p className="text-base sm:text-lg">
             We built agents that run on their own schedule, wake on important
             events, and remember what matters over time—so they keep working
             even when you’re not asking.
@@ -86,14 +90,14 @@ export default function ProactiveAgents() {
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Introduction */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Introduction
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             Many implementations of AI agents have a fundamental problem: they
             only work when prompted. These systems act like reactive
@@ -118,14 +122,14 @@ export default function ProactiveAgents() {
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Limitations */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Limitations of Reactive Architectures
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             The standard reactive agent architecture follows a simple,
             deterministic pattern:
@@ -237,14 +241,14 @@ def run_every_hour(...) # runs 0 * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Self-Scheduling */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Self-Scheduling and Wake Events
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             To eliminate the fixed, inefficient beat schedule, the agent needs
             to be able to schedule itself. After completing a workflow, the
@@ -309,14 +313,14 @@ def run_every_min(...) # runs * * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Temporal Memory */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Decaying-Resolution Memory
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             Long-running agents require memory systems that evolve over time.
             Traditional agent systems use knowledge graphs, RAG, or context
@@ -415,14 +419,14 @@ def run_every_min(...) # runs * * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Tool Semantics */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Stateful Tools as Memory
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           {/* Stateful tools as externalized memory */}
           <p>
             When using decaying-resolution memory, information such as contacts,
@@ -532,14 +536,14 @@ def run_every_min(...) # runs * * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Evaluation */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Evaluation and Open Challenges
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             Moving logic from deterministic software to learned behavior makes
             evaluation extremely complex. Standard LLM benchmarks like
@@ -561,14 +565,14 @@ def run_every_min(...) # runs * * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Limitations */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Limitations
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <ul className="list-disc pl-6 space-y-2">
             <li>
               <strong>Concurrency:</strong> Ledger-style memory enforces
@@ -597,14 +601,14 @@ def run_every_min(...) # runs * * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
       {/* Conclusion */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Conclusion
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             Building proactive AI agents requires rethinking how we architect
             autonomy. Instead of waiting for user prompts, these systems plan,
@@ -630,9 +634,11 @@ def run_every_min(...) # runs * * * * *
         </div>
       </section>
 
-      <hr className="my-12" />
+      <hr className={`my-12 ${SECTION_CLASS}`} />
 
-      <JoinUs />
+      <div className={SECTION_CLASS}>
+        <JoinUs />
+      </div>
     </div>
   );
 }

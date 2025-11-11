@@ -8,15 +8,19 @@ import { Link } from "react-router-dom";
 import CodeBlock from "../../components/CodeBlock";
 import { JoinUs } from "../../components/Hiring";
 
+const SECTION_CLASS = "w-full max-w-3xl px-4 sm:px-0";
+const PROSE_CLASS =
+  "prose prose-base sm:prose-lg text-gray-700 leading-relaxed space-y-4 max-w-none";
+
 export default function ProactiveVoiceAgents() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
   return (
-    <div className="flex flex-col w-full items-center mt-8 gap-12">
+    <div className="flex flex-col w-full items-center mt-6 sm:mt-8 gap-10 sm:gap-12">
       {/* Hero */}
-      <div className="bg-primary shadow-sm rounded-xl relative overflow-hidden aspect-video w-full -mx-16 mb-8">
+      <div className="bg-primary shadow-sm rounded-xl relative overflow-hidden w-full -mx-4 sm:-mx-8 lg:-mx-16 aspect-[4/3] sm:aspect-video">
         <img
           src="/person.png"
           alt=""
@@ -26,13 +30,13 @@ export default function ProactiveVoiceAgents() {
           }}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative p-16 flex flex-col justify-center h-full">
-          <h1 className="text-6xl font-bold text-white mb-6">
+        <div className="relative px-8 py-12 sm:p-12 lg:p-16 flex flex-col justify-center h-full gap-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
             Conversationality
           </h1>
-          <div className="flex items-center gap-2 text-white/90">
+          <div className="flex flex-wrap items-center gap-2 text-white/90 text-sm sm:text-base">
             <Link to="/">
-              <p className="text-lg underline hover:text-white transition-colors">
+              <p className="underline hover:text-white transition-colors">
                 Orin Labs
               </p>
             </Link>
@@ -43,13 +47,13 @@ export default function ProactiveVoiceAgents() {
       </div>
 
       {/* Hook + Key Takeaways */}
-      <section>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
-          <p className="text-lg">
+      <section className={SECTION_CLASS}>
+        <div className={PROSE_CLASS}>
+          <p className="text-base sm:text-lg">
             Most voice agents only react. If you stop speaking, they stop
             thinking.
           </p>
-          <p className="text-lg">
+          <p className="text-base sm:text-lg">
             We flipped the pipeline so the agent runs on its own, can speak
             first, and pauses cleanly when you talk. It feels natural and stays
             useful even when you’re silent.
@@ -84,11 +88,11 @@ export default function ProactiveVoiceAgents() {
       </section>
 
       {/* Introduction */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Introduction
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             Voice AI has become a standard way to build conversational
             interfaces. The typical architecture is straightforward: user speaks
@@ -118,11 +122,11 @@ export default function ProactiveVoiceAgents() {
       </section>
 
       {/* Traditional Voice Agent */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Traditional Voice Agent
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             The traditional voice agent is a relatively linear pipeline, shown
             below:
@@ -160,11 +164,11 @@ export default function ProactiveVoiceAgents() {
       </section>
 
       {/* Classic Pipeline + Silence Words */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Classic Pipeline + Silence Words
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             If a user stops speaking, we can usually detect the silence. At
             minimum, we can keep a timer for when the last STT trigger happened.
@@ -196,11 +200,11 @@ while True:
       </section>
 
       {/* Classic Pipeline + Silence Triggers */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Classic Pipeline + Silence Triggers
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             The only way to make contextual decisions about silence is to use
             the conversation itself. So, we can have an LLM decide what to do:
@@ -230,11 +234,11 @@ while True:
       </section>
 
       {/* Flipped Pipeline */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Flipped Pipeline
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             In the above example, we've subtly separated the event loop of the
             agent from the user input. Even without user input, the agent is
@@ -280,11 +284,11 @@ while True:
       </section>
 
       {/* Flipped Pipeline + Wait */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Flipped Pipeline + Wait
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>To fix this, let's give the agent the ability to wait.</p>
           <CodeBlock
             language="python"
@@ -321,11 +325,11 @@ while True:
       </section>
 
       {/* Flipped Pipeline + Wait + Barge-in */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Flipped Pipeline + Wait + Barge-in
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             The cleanest solution to the problems above is to add a blocking
             barge-in handler—so the entire execution of the agent stalls while
@@ -351,11 +355,11 @@ while True:
       </section>
 
       {/* Limitations and Tradeoffs */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">
           Limitations and Tradeoffs
         </h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <ul className="list-disc pl-6 space-y-2">
             <li>
               <strong>Compute budgets:</strong> An independent loop introduces
@@ -397,9 +401,9 @@ while True:
       </section>
 
       {/* Streaming */}
-      <section>
+      <section className={SECTION_CLASS}>
         <h2 className="text-2xl font-semibold text-gray-900 mb-4">Streaming</h2>
-        <div className="prose prose-lg text-gray-700 leading-relaxed space-y-4">
+        <div className={PROSE_CLASS}>
           <p>
             Without optimization, running a proactive voice agent like this can
             be slow. Our first versions would take 5–10s to respond to the user.
@@ -444,7 +448,9 @@ while True:
         </div>
       </section>
 
-      <JoinUs />
+      <div className={SECTION_CLASS}>
+        <JoinUs />
+      </div>
     </div>
   );
 }

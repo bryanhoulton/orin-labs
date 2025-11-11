@@ -90,8 +90,8 @@ const CONTACT_BUTTON = (
     target="_blank"
     rel="noopener noreferrer"
     className={cn(
-      "bg-primary text-white py-1 px-3 rounded-lg hover:bg-primary-400 transition-colors cursor-pointer",
-      "flex items-center gap-2 shadow-sm"
+      "bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-400 transition-colors cursor-pointer",
+      "flex items-center justify-center gap-2 shadow-sm w-full sm:w-auto text-sm sm:text-base"
     )}
   >
     Contact
@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-primary group shadow-sm rounded-xl h-[70vh] relative overflow-hidden -mx-16">
+      <div className="bg-primary group shadow-sm rounded-xl relative overflow-hidden -mx-4 sm:-mx-8 lg:-mx-16 min-h-[420px] sm:min-h-[520px] lg:min-h-[70vh]">
         <video
           ref={videoRef}
           src="/tree.mp4"
@@ -120,49 +120,53 @@ export default function Home() {
           playsInline
           style={{
             filter: "invert(1) brightness(0.40)",
-            translate: "0 64px",
+            translate: "0 48px",
             mixBlendMode: "screen",
           }}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="relative p-16">
-          <h1 className="text-7xl font-bold text-primary-100 flex flex-col">
+        <div className="relative p-8 sm:p-12 lg:p-16">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary-100 flex flex-col gap-1">
             <span>AI that</span>
             <span className="text-white">grows up</span>
             <span>with you</span>
           </h1>
         </div>
 
-        <ArrowDown className="absolute bottom-16 group-hover:translate-y-2 transition-transform left-16 w-6 h-6 text-primary-100" />
+        <ArrowDown className="absolute bottom-10 sm:bottom-16 left-1/2 -translate-x-1/2 sm:left-16 sm:translate-x-0 group-hover:translate-y-2 transition-transform w-6 h-6 text-primary-100" />
       </div>
 
       {/* Initiatives */}
-      <div className="flex flex-col items-start -mt-16" id="initiatives">
-        <div className="flex items-center gap-8 w-full">
-          <h2 className="text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
+      <div
+        className="flex flex-col items-start -mt-10 sm:-mt-16"
+        id="initiatives"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 w-full">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
             Initiatives
           </h2>
 
-          <hr className="flex-1" />
+          <hr className="flex-1 hidden sm:block" />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6 sm:gap-8 w-full mt-6">
           {initiatives.map((initiative, index) => (
             <div
               key={index}
               className={cn(
-                "flex items-center gap-8 h-80",
-                index != initiatives.length - 1 && "border-b pb-8"
+                "flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 w-full py-6 sm:py-8",
+                index !== initiatives.length - 1 &&
+                  "border-b border-neutral-200 dark:border-neutral-800"
               )}
             >
-              <span className="text-neutral-400 dark:text-neutral-600 text-4xl font-semibold font-mono shrink-0">
+              <span className="text-neutral-400 dark:text-neutral-600 text-3xl sm:text-4xl font-semibold font-mono shrink-0">
                 [{index + 1}]
               </span>
               <div className="flex flex-col gap-4">
-                <h3 className="text-4xl font-semibold text-neutral-900 dark:text-neutral-100">
+                <h3 className="text-3xl sm:text-4xl font-semibold text-neutral-900 dark:text-neutral-100">
                   {initiative.title}
                 </h3>
-                <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
+                <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
                   {initiative.description}
                 </p>
               </div>
@@ -173,11 +177,11 @@ export default function Home() {
 
       {/* Our Work */}
       <div className="flex flex-col items-start w-full" id="our-work">
-        <div className="flex items-center gap-8 w-full mb-8">
-          <h2 className="text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 w-full mb-6 sm:mb-8">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
             Our Work
           </h2>
-          <hr className="flex-1" />
+          <hr className="flex-1 hidden sm:block" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
@@ -185,7 +189,7 @@ export default function Home() {
             const content = (
               <div
                 className={cn(
-                  "group relative flex flex-col aspect-square rounded-xl overflow-hidden shadow-sm",
+                  "group relative flex flex-col aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden shadow-sm",
                   "bg-primary hover:shadow-md transition-shadow cursor-pointer"
                 )}
               >
@@ -236,12 +240,12 @@ export default function Home() {
       </div>
 
       {/* Join Us */}
-      <div className="flex flex-col gap-8 items-start" id="join-us">
+      <div className="flex flex-col gap-6 sm:gap-8 items-start" id="join-us">
         <div className="flex flex-col gap-4">
-          <h2 className="text-5xl font-semibold text-neutral-900 dark:text-neutral-100">
+          <h2 className="text-3xl sm:text-5xl font-semibold text-neutral-900 dark:text-neutral-100">
             Join Us
           </h2>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
             We are a small, San Francisco-based team focused on building AI to
             teach. We are solving hard and important problems for real people.
           </p>
@@ -250,7 +254,7 @@ export default function Home() {
         {CONTACT_BUTTON}
 
         <div className="flex flex-col items-stretch w-full">
-          <h2 className="text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4 px-4 md:px-0">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4 px-0 sm:px-4 md:px-0">
             Open Roles
           </h2>
 
@@ -260,7 +264,7 @@ export default function Home() {
               className={cn(
                 "flex text-left flex-col items-start gap-1 w-full hover:bg-neutral-200",
                 "dark:hover:bg-neutral-800",
-                "p-4 md:-mx-4 transition-colors rounded-md group"
+                "p-4 sm:p-5 md:-mx-4 transition-colors rounded-md group"
               )}
             >
               <div className="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-2">
@@ -273,7 +277,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <p className="text-base text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors max-w-2xl leading-relaxed">
                 {role.description}
               </p>
             </button>

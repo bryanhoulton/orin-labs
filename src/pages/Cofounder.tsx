@@ -2,11 +2,11 @@ import RocketshipGrowth from "../components/RocketshipGrowth";
 
 export default function Cofounder() {
   return (
-    <div className="flex flex-col items-start mt-8">
-      <h2 className="text-5xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+    <div className="flex flex-col items-start mt-6 sm:mt-8 gap-6">
+      <h2 className="text-3xl sm:text-5xl font-semibold text-neutral-900 dark:text-neutral-100">
         Be a Cofounder
       </h2>
-      <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl leading-relaxed">
+      <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
         I'm looking for a cofounder who wants to build a generational consumer
         company. We spend{" "}
         <strong className="text-primary">five trillion dollars</strong> every
@@ -16,10 +16,10 @@ export default function Cofounder() {
 
       <RocketshipGrowth />
 
-      <h3 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+      <h3 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
         About Me
       </h3>
-      <ul className="text-lg text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl leading-relaxed list-disc list-outside ml-6">
+      <ul className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed list-disc list-outside ml-6 space-y-2">
         <li className="pl-2">
           Built <span className="text-primary">quant infrastructure</span> for
           retail investors while in college
@@ -47,10 +47,10 @@ export default function Cofounder() {
         </li>
       </ul>
 
-      <h3 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+      <h3 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
         About You
       </h3>
-      <ul className="text-lg text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl leading-relaxed list-disc list-outside ml-6">
+      <ul className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed list-disc list-outside ml-6 space-y-2">
         <li className="pl-2">
           You want to build a{" "}
           <span className="text-primary">San Francisco</span>-based company of
@@ -69,10 +69,10 @@ export default function Cofounder() {
         </li>
       </ul>
 
-      <h3 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+      <h3 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
         Contact
       </h3>
-      <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6 max-w-2xl leading-relaxed">
+      <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
         If this sounds like you or someone you know, please email{" "}
         <a
           href="mailto:bryan@orinlabs.org"
