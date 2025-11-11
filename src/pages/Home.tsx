@@ -111,7 +111,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-primary group shadow-sm rounded-xl relative overflow-hidden -mx-4 sm:-mx-8 lg:-mx-16 min-h-[420px] sm:min-h-[520px] lg:min-h-[70vh]">
+      <div className="bg-primary group shadow-sm rounded-xl relative overflow-hidden lg:-mx-16 min-h-[420px] sm:min-h-[520px] lg:min-h-[70vh]">
         <video
           ref={videoRef}
           src="/tree.mp4"
@@ -137,10 +137,7 @@ export default function Home() {
       </div>
 
       {/* Initiatives */}
-      <div
-        className="flex flex-col items-start -mt-10 sm:-mt-16"
-        id="initiatives"
-      >
+      <div className="flex flex-col items-start -mt-6" id="initiatives">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 w-full">
           <h2 className="text-4xl sm:text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
             Initiatives
