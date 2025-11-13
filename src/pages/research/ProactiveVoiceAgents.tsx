@@ -10,7 +10,9 @@ import { JoinUs } from "../../components/Hiring";
 
 const SECTION_CLASS = "w-full max-w-3xl px-4 sm:px-0";
 const PROSE_CLASS =
-  "prose prose-base sm:prose-lg text-gray-700 leading-relaxed space-y-4 max-w-none";
+  "prose prose-base sm:prose-lg text-neutral-700 dark:text-neutral-200 dark:prose-invert leading-relaxed space-y-4 max-w-none";
+const SECTION_HEADING_CLASS =
+  "text-2xl font-semibold text-neutral-900 dark:text-neutral-100 mb-4";
 
 export default function ProactiveVoiceAgents() {
   useEffect(() => {
@@ -66,16 +68,16 @@ export default function ProactiveVoiceAgents() {
               </li>
               <li>
                 Two simple tools pace conversation:{" "}
-                <code className="bg-gray-100 px-2 py-1 rounded">speak()</code>{" "}
+                <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">speak()</code>{" "}
                 and{" "}
-                <code className="bg-gray-100 px-2 py-1 rounded">wait()</code>.
+                <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">wait()</code>.
               </li>
               <li>
                 A blocking barge-in handler pauses the agent while you talk.
               </li>
               <li>
                 Streaming keeps it responsive: stream STT in, start TTS early on{" "}
-                <code className="bg-gray-100 px-2 py-1 rounded">speak</code>{" "}
+                <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">speak</code>{" "}
                 actions, cancel on barge-in.
               </li>
               <li>
@@ -89,7 +91,7 @@ export default function ProactiveVoiceAgents() {
 
       {/* Introduction */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Introduction
         </h2>
         <div className={PROSE_CLASS}>
@@ -123,7 +125,7 @@ export default function ProactiveVoiceAgents() {
 
       {/* Traditional Voice Agent */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Traditional Voice Agent
         </h2>
         <div className={PROSE_CLASS}>
@@ -135,7 +137,7 @@ export default function ProactiveVoiceAgents() {
             <img
               src="/voice.png"
               alt="Voice Agent Architecture: User → STT → LLM + Context → TTS → User"
-              className="max-w-full h-auto rounded-xl border"
+              className="max-w-full h-auto rounded-xl border border-neutral-200 dark:border-neutral-700"
             />
           </div>
           <p>
@@ -153,7 +155,7 @@ export default function ProactiveVoiceAgents() {
               href="https://voiceaiandvoiceagents.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-primary hover:text-primary-600 transition-colors"
+              className="underline text-primary hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
               This guide
             </a>{" "}
@@ -165,7 +167,7 @@ export default function ProactiveVoiceAgents() {
 
       {/* Classic Pipeline + Silence Words */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Classic Pipeline + Silence Words
         </h2>
         <div className={PROSE_CLASS}>
@@ -201,7 +203,7 @@ while True:
 
       {/* Classic Pipeline + Silence Triggers */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Classic Pipeline + Silence Triggers
         </h2>
         <div className={PROSE_CLASS}>
@@ -235,7 +237,7 @@ while True:
 
       {/* Flipped Pipeline */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Flipped Pipeline
         </h2>
         <div className={PROSE_CLASS}>
@@ -285,7 +287,7 @@ while True:
 
       {/* Flipped Pipeline + Wait */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Flipped Pipeline + Wait
         </h2>
         <div className={PROSE_CLASS}>
@@ -326,7 +328,7 @@ while True:
 
       {/* Flipped Pipeline + Wait + Barge-in */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Flipped Pipeline + Wait + Barge-in
         </h2>
         <div className={PROSE_CLASS}>
@@ -356,7 +358,7 @@ while True:
 
       {/* Limitations and Tradeoffs */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        <h2 className={SECTION_HEADING_CLASS}>
           Limitations and Tradeoffs
         </h2>
         <div className={PROSE_CLASS}>
@@ -364,7 +366,7 @@ while True:
             <li>
               <strong>Compute budgets:</strong> An independent loop introduces
               ongoing compute. Mitigate with a{" "}
-              <code className="bg-gray-100 px-1 py-0.5 rounded">wait()</code>
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-1 py-0.5 rounded">wait()</code>
               tool, adaptive sleep, max-steps per loop, and per-user budgets.
             </li>
             <li>
@@ -376,7 +378,7 @@ while True:
               <strong>Streaming tool calls:</strong> The model may emit
               multiple/partial tool calls. Use an incremental parser, validate
               fragments, buffer safely, and start TTS early only on validated
-              <code className="bg-gray-100 px-1 py-0.5 rounded">
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-1 py-0.5 rounded">
                 speak()
               </code>{" "}
               calls.
@@ -402,7 +404,7 @@ while True:
 
       {/* Streaming */}
       <section className={SECTION_CLASS}>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Streaming</h2>
+        <h2 className={SECTION_HEADING_CLASS}>Streaming</h2>
         <div className={PROSE_CLASS}>
           <p>
             Without optimization, running a proactive voice agent like this can
@@ -427,7 +429,7 @@ while True:
               In the classic pipeline, any response is spoken—therefore you can
               pass streamed chunks directly to TTS. Here, you need to parse tool
               calls as they stream. If you can spot a{" "}
-              <code className="bg-gray-100 px-2 py-1 rounded">speak</code>{" "}
+              <code className="bg-gray-100 dark:bg-neutral-800 dark:text-neutral-100 px-2 py-1 rounded">speak</code>{" "}
               action early, start TTS right away. Handle the case where the
               model returns multiple tool calls in one response.
             </p>
