@@ -1,4 +1,4 @@
-import RocketshipGrowth from "../components/RocketshipGrowth";
+import RocketshipGrowth from '../components/RocketshipGrowth';
 
 export default function Cofounder() {
   return (
@@ -9,7 +9,7 @@ export default function Cofounder() {
       <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
         I'm looking for a cofounder who wants to build a generational consumer
         company. We spend{" "}
-        <strong className="text-primary">five trillion dollars</strong> every
+        <strong className="text-primary">three trillion dollars</strong> every
         year teaching the next generation, and AI is about to turn it upside
         down.
       </p>
