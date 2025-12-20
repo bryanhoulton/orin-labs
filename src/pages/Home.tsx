@@ -95,7 +95,7 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary-100">
             We build agents
             <br />
-            that change people.
+            that improve people.
           </h1>
         </div>
 
