@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import Layout from "./components/Layout";
 import Cofounder from "./pages/Cofounder";
@@ -7,9 +8,21 @@ import Research from "./pages/Research";
 import ProactiveAgents from "./pages/research/ProactiveAgents";
 import ProactiveVoiceAgents from "./pages/research/ProactiveVoiceAgents";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route
         path="/"
         element={
@@ -51,6 +64,7 @@ function App() {
         }
       />
     </Routes>
+    </>
   );
 }
 

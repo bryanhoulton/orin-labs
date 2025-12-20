@@ -99,7 +99,7 @@ export default function Research() {
 
       <hr className="my-12" />
 
-      <JoinUs />
+      <JoinUs compact />
     </>
   );
 }

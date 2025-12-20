@@ -326,3 +326,72 @@ pre {
 .research p {
   @apply pb-2;
 }
+
+/* White Paper Styles */
+.white-paper {
+  @apply max-w-3xl mx-auto;
+}
+
+.white-paper header h1 {
+  font-family: "Season", Georgia, "Times New Roman", serif !important;
+}
+
+.paper-prose {
+  @apply text-neutral-700 dark:text-neutral-300 leading-relaxed space-y-4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.paper-prose p {
+  @apply mb-4;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.paper-prose ul,
+.paper-prose ol {
+  @apply pl-8 space-y-2 mb-4;
+}
+
+.paper-prose ul {
+  @apply list-disc;
+}
+
+.paper-prose ol {
+  @apply list-decimal;
+}
+
+.paper-prose li {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
+
+.paper-prose strong {
+  @apply font-semibold text-neutral-800 dark:text-neutral-200;
+}
+
+.paper-prose em {
+  font-style: italic;
+}
+
+.paper-prose code {
+  @apply bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-sm;
+  font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+}
+
+.paper-prose a {
+  @apply text-primary underline hover:no-underline transition-colors;
+}
+
+.white-paper-content hr {
+  @apply my-10 border-neutral-300 dark:border-neutral-700;
+}
+
+/* Figure captions */
+.paper-figure {
+  @apply my-8;
+}
+
+.paper-figure figcaption {
+  @apply text-sm text-neutral-500 dark:text-neutral-400 mt-3 text-center italic;
+}
