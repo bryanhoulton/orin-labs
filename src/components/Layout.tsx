@@ -138,37 +138,8 @@ export default function Layout({ children }: LayoutProps) {
       </div>
 
       {/* Footer */}
-      <footer className="w-full max-w-3xl xl:max-w-4xl z-10 flex flex-col md:flex-row border-t border-neutral-200 dark:border-neutral-800 mt-12 relative overflow-hidden gap-4 md:gap-6 py-8 md:py-12">
-        {/* Masked background layer */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to right, var(--neutral-50) 40%, var(--primary-500) 40%)",
-            maskImage: "linear-gradient(#fff, #fff), url(/footer.png)",
-            WebkitMaskImage: "linear-gradient(#fff, #fff), url(/footer.png)",
-            maskSize: "100%, 60%",
-            WebkitMaskSize: "100%, 60%",
-            maskPosition: "center, right center",
-            WebkitMaskPosition: "center, right center",
-            maskRepeat: "no-repeat",
-            WebkitMaskRepeat: "no-repeat",
-            maskMode: "luminance",
-            maskComposite: "exclude",
-            WebkitMaskComposite: "xor",
-            // Dark mode override (uses JS to detect prefers-color-scheme)
-            ...(window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? {
-                  background:
-                    "linear-gradient(to right, var(--neutral-900) 40%, var(--primary-700) 40%)",
-                }
-              : {}),
-          }}
-        />
-
-        {/* Content */}
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
+      <footer className="w-full max-w-3xl xl:max-w-4xl z-10 flex flex-col md:flex-row border-t border-neutral-200 dark:border-neutral-800 mt-12 gap-4 md:gap-6 py-8 md:py-12">
+        <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
             &copy; {new Date().getFullYear()} Orin Labs. All rights reserved.
           </p>
