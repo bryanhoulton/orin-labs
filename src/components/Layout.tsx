@@ -73,7 +73,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="bg-neutral-50 dark:bg-neutral-900 flex flex-col items-center min-h-screen pt-6 sm:pt-8 gap-12 sm:gap-16 px-4 sm:px-6 lg:px-8">
-      <nav className="w-full max-w-6xl z-10">
+      <nav className="w-full max-w-3xl xl:max-w-4xl z-10">
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2">
             <Logo className="text-primary w-8 h-8" />
@@ -138,7 +138,7 @@ export default function Layout({ children }: LayoutProps) {
       </div>
 
       {/* Footer */}
-      <footer className="w-full max-w-6xl z-10 flex flex-col md:flex-row border-t border-neutral-200 dark:border-neutral-800 mt-12 relative overflow-hidden gap-4 md:gap-6 py-8 md:py-12">
+      <footer className="w-full max-w-3xl xl:max-w-4xl z-10 flex flex-col md:flex-row border-t border-neutral-200 dark:border-neutral-800 mt-12 relative overflow-hidden gap-4 md:gap-6 py-8 md:py-12">
         {/* Masked background layer */}
         <div
           className="absolute inset-0"

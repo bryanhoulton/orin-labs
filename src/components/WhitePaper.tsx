@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-interface WhitePaperProps {
+interface ResearchArticleProps {
   title: string;
   authors?: string[];
   date: string;
@@ -8,21 +8,21 @@ interface WhitePaperProps {
   children: React.ReactNode;
 }
 
-export function WhitePaper({
+export function ResearchArticle({
   title,
   authors = ["Orin Labs"],
   date,
   abstract,
   children,
-}: WhitePaperProps) {
+}: ResearchArticleProps) {
   return (
-    <article className="white-paper">
+    <article className="research-article pt-8 sm:pt-12">
       {/* Title Block */}
-      <header className="mb-12 text-center border-b-2 border-neutral-800 dark:border-neutral-200 pb-10">
+      <header className="mb-12">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-neutral-100 mb-6 leading-tight">
           {title}
         </h1>
-        <div className="flex flex-wrap items-center justify-center gap-2 text-neutral-600 dark:text-neutral-400 text-base">
+        <div className="flex flex-wrap items-center gap-2 text-neutral-600 dark:text-neutral-400 text-base">
           {authors.map((author, i) => (
             <span key={author}>
               {author === "Orin Labs" ? (
@@ -49,17 +49,19 @@ export function WhitePaper({
       </header>
 
       {/* Abstract */}
-      <section className="mb-12">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-4">
-          Abstract
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-base sm:text-lg border-l-4 border-primary pl-6 italic">
-          {abstract}
-        </p>
-      </section>
+      <p
+        className="mb-12 text-base"
+        style={{
+          color: "rgba(17, 17, 17, 0.6)",
+          lineHeight: 1.5,
+          letterSpacing: "0.01em",
+        }}
+      >
+        {abstract}
+      </p>
 
       {/* Content */}
-      <div className="white-paper-content">{children}</div>
+      <div className="research-content">{children}</div>
     </article>
   );
 }
@@ -79,7 +81,7 @@ export function Section({ number, title, children }: SectionProps) {
         )}
         {title}
       </h2>
-      <div className="paper-prose">{children}</div>
+      <div className="research-prose">{children}</div>
     </section>
   );
 }
@@ -99,19 +101,18 @@ export function Subsection({ number, title, children }: SubsectionProps) {
         )}
         {title}
       </h3>
-      <div className="paper-prose">{children}</div>
+      <div className="research-prose">{children}</div>
     </div>
   );
 }
 
 export function KeyTakeaways({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-6 mb-8">
-      <h3 className="text-sm font-bold uppercase tracking-widest text-neutral-600 dark:text-neutral-400 mb-4">
+    <section className="mb-12">
+      <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-6">
         Key Takeaways
-      </h3>
-      {children}
-    </div>
+      </h2>
+      <div className="research-prose">{children}</div>
+    </section>
   );
 }
-

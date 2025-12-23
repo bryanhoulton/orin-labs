@@ -1,12 +1,16 @@
-import "prismjs/components/prism-python";
+import 'prismjs/components/prism-python';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import Prism from "prismjs";
+import Prism from 'prismjs';
 
-import CodeBlock from "../../components/CodeBlock";
-import { JoinUs } from "../../components/Hiring";
-import { WhitePaper, Section, KeyTakeaways } from "../../components/WhitePaper";
+import CodeBlock from '../../components/CodeBlock';
+import { JoinUs } from '../../components/Hiring';
+import {
+  KeyTakeaways,
+  ResearchArticle,
+  Section,
+} from '../../components/WhitePaper';
 
 export default function ProactiveVoiceAgents() {
   useEffect(() => {
@@ -14,24 +18,20 @@ export default function ProactiveVoiceAgents() {
   }, []);
 
   return (
-    <WhitePaper
+    <ResearchArticle
       title="Conversationality"
       authors={["Orin Labs"]}
       date="November 2025"
-      abstract="We explore how to build proactive voice agents that work independently of user input. By flipping the traditional voice pipeline, we create agents that can speak first, handle interruptions, and maintain natural conversation flow. This paper presents our approach to eliminating brittle silence heuristics and enabling truly autonomous voice interaction."
+      abstract="We explore how to build proactive voice agents that work independently of user input. By flipping the traditional voice pipeline, we create agents that can speak first, handle interruptions, and maintain natural conversation flow. This presents our approach to eliminating brittle silence heuristics and enabling truly autonomous voice interaction."
     >
       <KeyTakeaways>
-        <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
-          <li>
-            The agent loop runs continuously, not just on user speech.
-          </li>
+        <ul>
+          <li>The agent loop runs continuously, not just on user speech.</li>
           <li>
             Two simple tools pace conversation: <code>speak()</code> and{" "}
             <code>wait()</code>.
           </li>
-          <li>
-            A blocking barge-in handler pauses the agent while you talk.
-          </li>
+          <li>A blocking barge-in handler pauses the agent while you talk.</li>
           <li>
             Streaming keeps it responsive: stream STT in, start TTS early on{" "}
             <code>speak</code> actions, cancel on barge-in.
@@ -77,7 +77,7 @@ export default function ProactiveVoiceAgents() {
           The traditional voice agent is a relatively linear pipeline, shown
           below:
         </p>
-        <figure className="paper-figure">
+        <figure className="research-figure">
           <img
             src="/voice.png"
             alt="Voice Agent Architecture: User → STT → LLM + Context → TTS → User"
@@ -361,6 +361,6 @@ while True:
       <hr />
 
       <JoinUs compact />
-    </WhitePaper>
+    </ResearchArticle>
   );
 }

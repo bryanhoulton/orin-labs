@@ -10,7 +10,7 @@ import { JoinUs } from "../../components/Hiring";
 import MemoryDiagram from "../../components/MemoryDiagram";
 import ScalingChart from "../../components/ScalingChart";
 import {
-  WhitePaper,
+  ResearchArticle,
   Section,
   Subsection,
   KeyTakeaways,
@@ -22,14 +22,14 @@ export default function ProactiveAgents() {
   }, []);
 
   return (
-    <WhitePaper
+    <ResearchArticle
       title="Building Proactive Agents"
       authors={["Orin Labs"]}
       date="October 2025"
-      abstract="We present a method for building proactive agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, proactive agents actively pursue goals without constant prompting. This paper describes the architecture, memory systems, and operational patterns that enable sustained autonomous behavior."
+      abstract="We present a method for building proactive agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, proactive agents actively pursue goals without constant prompting. This describes the architecture, memory systems, and operational patterns that enable sustained autonomous behavior."
     >
       <KeyTakeaways>
-        <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
+        <ul>
           <li>
             <strong>Self-scheduling:</strong> the agent decides when to wake,
             cutting idle compute.
@@ -272,7 +272,7 @@ def run_every_min(...) # runs * * * * *
             results from resolution <em>R-1</em>. All summaries are normalized
             to the agent's set timezone.
           </p>
-          <figure className="paper-figure">
+          <figure className="research-figure">
             <MemoryDiagram />
           </figure>
         </Subsection>
@@ -284,7 +284,7 @@ def run_every_min(...) # runs * * * * *
             maintaining long-term temporal awareness while constraining
             inference computational overhead.
           </p>
-          <figure className="paper-figure">
+          <figure className="research-figure">
             <ScalingChart />
             <figcaption>
               Decaying-Resolution Memory scales approximately O(log N),
@@ -507,6 +507,6 @@ def run_every_min(...) # runs * * * * *
       <hr />
 
       <JoinUs compact />
-    </WhitePaper>
+    </ResearchArticle>
   );
 }

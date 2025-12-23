@@ -6,8 +6,20 @@
   src: url("/font2.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Body";
+  font-style: normal;
+  src: url("/bfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Body";
+  font-style: italic;
+  src: url("/ifont.woff") format("woff");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Body", system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -327,71 +339,124 @@ pre {
   @apply pb-2;
 }
 
-/* White Paper Styles */
-.white-paper {
-  @apply max-w-3xl mx-auto;
+/* Research Article Styles */
+.research-article {
+  @apply w-full;
 }
 
-.white-paper header h1 {
-  font-family: "Season", Georgia, "Times New Roman", serif !important;
+.research-prose {
+  @apply space-y-4;
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  font-weight: 500;
 }
 
-.paper-prose {
-  @apply text-neutral-700 dark:text-neutral-300 leading-relaxed space-y-4;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.0625rem;
-  line-height: 1.8;
+.dark .research-prose {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.paper-prose p {
-  @apply mb-4;
-  text-align: justify;
-  hyphens: auto;
+.research-prose p {
+  @apply mb-5;
 }
 
-.paper-prose ul,
-.paper-prose ol {
-  @apply pl-8 space-y-2 mb-4;
+.research-prose ul,
+.research-prose ol {
+  @apply pl-6 space-y-2 mb-5;
 }
 
-.paper-prose ul {
+.research-prose ul {
   @apply list-disc;
 }
 
-.paper-prose ol {
+.research-prose ol {
   @apply list-decimal;
 }
 
-.paper-prose li {
-  @apply text-neutral-700 dark:text-neutral-300;
+.research-prose li {
+  color: inherit;
 }
 
-.paper-prose strong {
-  @apply font-semibold text-neutral-800 dark:text-neutral-200;
+.research-prose strong {
+  @apply font-semibold text-neutral-700 dark:text-neutral-300;
 }
 
-.paper-prose em {
+.research-prose em {
   font-style: italic;
 }
 
-.paper-prose code {
+.research-prose code {
   @apply bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-sm;
   font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
 }
 
-.paper-prose a {
+.research-prose a {
   @apply text-primary underline hover:no-underline transition-colors;
 }
 
-.white-paper-content hr {
+.research-content hr {
   @apply my-10 border-neutral-300 dark:border-neutral-700;
 }
 
 /* Figure captions */
-.paper-figure {
+.research-figure {
   @apply my-8;
 }
 
-.paper-figure figcaption {
+.research-figure figcaption {
   @apply text-sm text-neutral-500 dark:text-neutral-400 mt-3 text-center italic;
+}
+
+/* Blog Styles */
+.blog-content {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
+
+.blog-prose {
+  @apply text-neutral-700 dark:text-neutral-300;
+  font-size: 1.125rem;
+  line-height: 1.85;
+}
+
+.blog-prose p {
+  @apply mb-6;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  @apply pl-6 space-y-3 mb-6;
+}
+
+.blog-prose ul {
+  @apply list-disc;
+}
+
+.blog-prose ol {
+  @apply list-decimal;
+}
+
+.blog-prose li {
+  @apply text-neutral-700 dark:text-neutral-300;
+}
+
+.blog-prose strong {
+  @apply font-semibold text-neutral-900 dark:text-neutral-100;
+}
+
+.blog-prose em {
+  font-style: italic;
+}
+
+.blog-prose code {
+  @apply bg-neutral-100 dark:bg-neutral-800 px-1.5 py-0.5 rounded text-sm;
+  font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+}
+
+.blog-prose a {
+  @apply text-primary underline underline-offset-2 hover:no-underline transition-colors;
+}
+
+.blog-prose blockquote {
+  @apply border-l-2 border-primary pl-6 my-8 italic text-neutral-600 dark:text-neutral-400;
 }
