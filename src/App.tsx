@@ -9,6 +9,7 @@ import {
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Research from './pages/Research';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import ProactiveAgents from './pages/research/ProactiveAgents';
 import ProactiveVoiceAgents from './pages/research/ProactiveVoiceAgents';
 
@@ -56,6 +57,14 @@ function App() {
           element={
             <Layout>
               <ProactiveVoiceAgents />
+            </Layout>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <Layout>
+              <PrivacyPolicy />
             </Layout>
           }
         />
