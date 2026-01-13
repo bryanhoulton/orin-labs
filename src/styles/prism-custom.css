@@ -3,6 +3,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   background: none;
+  color: var(--neutral-800);
   font-family: "Fira Code", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono",
     monospace;
   font-size: 0.95em;

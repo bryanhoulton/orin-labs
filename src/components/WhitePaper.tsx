@@ -49,14 +49,7 @@ export function ResearchArticle({
       </header>
 
       {/* Abstract */}
-      <p
-        className="mb-12 text-base"
-        style={{
-          color: "rgba(17, 17, 17, 0.6)",
-          lineHeight: 1.5,
-          letterSpacing: "0.01em",
-        }}
-      >
+      <p className="mb-12 text-base text-neutral-600/80 dark:text-neutral-400/80 leading-normal tracking-wide">
         {abstract}
       </p>
 
