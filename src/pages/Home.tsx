@@ -48,6 +48,20 @@ const workItems: WorkItem[] = [
     type: "product",
   },
   {
+    title: "Generative UIs",
+    description: "Expressive, design-safe generative UIs.",
+    image: "/hand.png",
+    link: "https://ui.orinlabs.org",
+    type: "research",
+  },
+  {
+    title: "Memory",
+    description: "Memory at the speed of thought.",
+    image: "/memory.png",
+    link: "https://memory.orinlabs.org",
+    type: "research",
+  },
+  {
     title: "Proactive Agents",
     description:
       "Agents that schedule themselves, wake on events, and remember what matters over time.",
@@ -164,25 +178,26 @@ export default function Home() {
               <div
                 className={cn(
                   "group relative flex flex-col aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden shadow-sm",
-                  "bg-primary hover:shadow-md transition-shadow cursor-pointer"
+                  "bg-primary hover:shadow-md transition-shadow cursor-pointer border"
                 )}
               >
-                {/* Background image layer */}
+                {/* Background image layer with screen blend */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
+                  className="absolute -inset-1 bg-cover bg-center mix-blend-screen scale-105 group-hover:scale-115 transition-transform duration-500"
                   style={{
                     backgroundImage: `url(${item.image})`,
-                    filter: "invert(1) brightness(0.40)",
-                    mixBlendMode: "screen",
+                    filter: "grayscale(1)",
+                    willChange: "transform",
+                    backfaceVisibility: "hidden",
                   }}
                 />
 
                 {/* Content overlay */}
-                <div className="relative z-20 flex flex-col gap-1 justify-between h-full p-4 text-white">
-                  <p className="text-xs ml-auto bg-primary-100 rounded px-1.5 py-0.5 w-fit capitalize text-primary">
+                <div className="relative z-20 flex flex-col gap-1 justify-between h-full p-4 text-black">
+                  <p className="text-xs ml-auto bg-white shadow border rounded px-1.5 py-0.5 w-fit capitalize text-neutral-600">
                     {item.type}
                   </p>
-                  <h3 className="text-xl font-semibold group-hover:text-primary-50 transition-colors">
+                  <h3 className="text-xl font-semibold group-hover:text-neutral-600 transition-colors">
                     {item.title}
                   </h3>
                 </div>
