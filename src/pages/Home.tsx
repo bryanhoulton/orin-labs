@@ -55,7 +55,7 @@ const workItems: WorkItem[] = [
     type: "research",
   },
   {
-    title: "Memory",
+    title: "Streaming Memory",
     description: "Memory at the speed of thought.",
     image: "/memory.png",
     link: "https://memory.orinlabs.org",
