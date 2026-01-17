@@ -10,6 +10,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Research from './pages/Research';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import ProactiveAgents from './pages/research/ProactiveAgents';
 import ProactiveVoiceAgents from './pages/research/ProactiveVoiceAgents';
 
@@ -65,6 +66,14 @@ function App() {
           element={
             <Layout>
               <PrivacyPolicy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/terms"
+          element={
+            <Layout>
+              <TermsOfService />
             </Layout>
           }
         />

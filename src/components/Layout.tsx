@@ -144,7 +144,11 @@ export default function Layout({ children }: LayoutProps) {
             &copy; {new Date().getFullYear()} Orin Labs. All rights reserved.
             <span className="mx-2">•</span>
             <Link to="/privacy" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
-              Privacy Policy
+              Privacy
+            </Link>
+            <span className="mx-2">•</span>
+            <Link to="/terms" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+              Terms
             </Link>
           </p>
 
