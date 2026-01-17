@@ -220,7 +220,6 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-400 mb-4">
               <li>Requiring a parent to sign a consent form</li>
               <li>Requiring a parent to provide credit card or other payment information for verification</li>
-              <li>Having a parent call a toll-free number</li>
               <li>Having a parent provide a government-issued ID for verification</li>
               <li>Video conferencing with a parent</li>
             </ul>
@@ -523,7 +522,7 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <p className="text-neutral-600 dark:text-neutral-400">
-              To submit a request, email <a href="mailto:privacy@orinlabs.com" className="text-primary hover:underline">privacy@orinlabs.com</a> or call (913) 747-5195. We may need to verify your identity before processing your request.
+              To submit a request, email <a href="mailto:privacy@orinlabs.com" className="text-primary hover:underline">privacy@orinlabs.com</a>. We may need to verify your identity before processing your request.
             </p>
           </section>
 
@@ -657,12 +656,9 @@ export default function PrivacyPolicy() {
                 <strong>Data Protection Officer:</strong>{' '}
                 <a href="mailto:dpo@orinlabs.com" className="text-primary hover:underline">dpo@orinlabs.com</a>
               </p>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-2">
+              <p className="text-neutral-600 dark:text-neutral-400">
                 <strong>Children's Privacy:</strong>{' '}
                 <a href="mailto:coppa@orinlabs.com" className="text-primary hover:underline">coppa@orinlabs.com</a>
-              </p>
-              <p className="text-neutral-600 dark:text-neutral-400">
-                <strong>Phone:</strong> (913) 747-5195
               </p>
             </div>
           </section>

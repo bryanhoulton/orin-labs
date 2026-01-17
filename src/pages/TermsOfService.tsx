@@ -596,12 +596,9 @@ export default function TermsOfService() {
                 <strong>General Inquiries:</strong>{' '}
                 <a href="mailto:contact@orinlabs.com" className="text-primary hover:underline">contact@orinlabs.com</a>
               </p>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-2">
+              <p className="text-neutral-600 dark:text-neutral-400">
                 <strong>Legal Matters:</strong>{' '}
                 <a href="mailto:legal@orinlabs.com" className="text-primary hover:underline">legal@orinlabs.com</a>
-              </p>
-              <p className="text-neutral-600 dark:text-neutral-400">
-                <strong>Phone:</strong> (913) 747-5195
               </p>
             </div>
           </section>
