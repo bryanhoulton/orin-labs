@@ -523,7 +523,7 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <p className="text-neutral-600 dark:text-neutral-400">
-              To submit a request, email <a href="mailto:privacy@orinlabs.com" className="text-primary hover:underline">privacy@orinlabs.com</a> or call 1-800-XXX-XXXX. We may need to verify your identity before processing your request.
+              To submit a request, email <a href="mailto:privacy@orinlabs.com" className="text-primary hover:underline">privacy@orinlabs.com</a> or call (913) 747-5195. We may need to verify your identity before processing your request.
             </p>
           </section>
 
@@ -596,6 +596,7 @@ export default function PrivacyPolicy() {
               Key third-party services we may integrate with include:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-400 mt-4">
+              <li>AI service providers (Anthropic, OpenAI, Google Gemini)</li>
               <li>Payment processors (Stripe, PayPal)</li>
               <li>Account aggregation services (Plaid)</li>
               <li>Analytics providers (Google Analytics, Mixpanel)</li>
@@ -644,8 +645,8 @@ export default function PrivacyPolicy() {
               <p className="text-neutral-700 dark:text-neutral-300 font-semibold mb-2">Orin Labs, Inc.</p>
               <p className="text-neutral-600 dark:text-neutral-400 mb-4">
                 Attn: Privacy Team<br />
-                [Address Line 1]<br />
-                [City, State ZIP Code]<br />
+                965 Oak St<br />
+                San Francisco, CA 94117<br />
                 United States
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 mb-2">
@@ -661,7 +662,7 @@ export default function PrivacyPolicy() {
                 <a href="mailto:coppa@orinlabs.com" className="text-primary hover:underline">coppa@orinlabs.com</a>
               </p>
               <p className="text-neutral-600 dark:text-neutral-400">
-                <strong>Phone:</strong> 1-800-XXX-XXXX
+                <strong>Phone:</strong> (913) 747-5195
               </p>
             </div>
           </section>

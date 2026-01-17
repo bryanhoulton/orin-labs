@@ -83,7 +83,7 @@ export default function TermsOfService() {
                 <strong>Children's Services:</strong> Certain Services are specifically designed for children under 13 and require verified parental consent as described in Section 4.
               </li>
               <li>
-                <strong>Financial Services:</strong> You must be at least 18 years old (or the age of majority in your jurisdiction) to access our financial Services, unless using a custodial or supervised account as described in Section 5.
+                <strong>Financial Services:</strong> You must be at least 18 years old (or the age of majority in your jurisdiction) to access our financial Services. For minor users, a parent or legal guardian must create and manage the account as described in Section 5.
               </li>
             </ul>
             <p className="text-neutral-600 dark:text-neutral-400">
@@ -185,8 +185,8 @@ export default function TermsOfService() {
               5.1 Eligibility for Financial Services
             </h3>
             <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-400 mb-4">
-              <li>You must be at least 18 years old (or the age of majority in your jurisdiction) to use financial Services independently.</li>
-              <li>Custodial accounts for minors may be available with parent/guardian oversight.</li>
+              <li>You must be at least 18 years old (or the age of majority in your jurisdiction) to use financial Services.</li>
+              <li>For minor users, a parent or legal guardian must create and manage the account on their behalf.</li>
               <li>You must provide accurate identity verification information as required by applicable laws and regulations.</li>
               <li>You must have a valid bank account or payment method in your name.</li>
             </ul>
@@ -588,8 +588,8 @@ export default function TermsOfService() {
               <p className="text-neutral-700 dark:text-neutral-300 font-semibold mb-2">Orin Labs, Inc.</p>
               <p className="text-neutral-600 dark:text-neutral-400 mb-4">
                 Attn: Legal Department<br />
-                [Address Line 1]<br />
-                [City, State ZIP Code]<br />
+                965 Oak St<br />
+                San Francisco, CA 94117<br />
                 United States
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 mb-2">
@@ -601,7 +601,7 @@ export default function TermsOfService() {
                 <a href="mailto:legal@orinlabs.com" className="text-primary hover:underline">legal@orinlabs.com</a>
               </p>
               <p className="text-neutral-600 dark:text-neutral-400">
-                <strong>Phone:</strong> 1-800-XXX-XXXX
+                <strong>Phone:</strong> (913) 747-5195
               </p>
             </div>
           </section>
