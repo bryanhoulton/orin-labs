@@ -1,2 +1,2 @@
-export { default as ProactiveAgents } from './ProactiveAgents';
+export { default as LongHorizonAgents } from './LongHorizonAgents';
 export { default as ProactiveVoiceAgents } from './ProactiveVoiceAgents';

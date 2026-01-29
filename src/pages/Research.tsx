@@ -14,13 +14,13 @@ interface ResearchPost {
 
 const RESEARCH_POSTS: ResearchPost[] = [
   {
-    id: "proactive-agents",
-    title: "Building Proactive Agents",
+    id: "long-horizon-agents",
+    title: "Building Long-Horizon Agents",
     description:
-      "We present a method for building proactive agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, proactive agents actively pursue goals without constant prompting.",
+      "We present a method for building long-horizon agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, long-horizon agents actively pursue goals without constant prompting.",
     date: "October 2025",
     author: "Orin Labs",
-    path: "/research/proactive-agents",
+    path: "/research/long-horizon-agents",
   },
   {
     id: "conversationality",

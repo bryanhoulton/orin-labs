@@ -11,7 +11,7 @@ import Home from './pages/Home';
 import Research from './pages/Research';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
-import ProactiveAgents from './pages/research/ProactiveAgents';
+import LongHorizonAgents from './pages/research/LongHorizonAgents';
 import ProactiveVoiceAgents from './pages/research/ProactiveVoiceAgents';
 
 function ScrollToTop() {
@@ -46,10 +46,10 @@ function App() {
           }
         />
         <Route
-          path="/research/proactive-agents"
+          path="/research/long-horizon-agents"
           element={
             <Layout>
-              <ProactiveAgents />
+              <LongHorizonAgents />
             </Layout>
           }
         />

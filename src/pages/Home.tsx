@@ -62,11 +62,11 @@ const workItems: WorkItem[] = [
     type: "research",
   },
   {
-    title: "Proactive Agents",
+    title: "Long-Horizon Agents",
     description:
       "Agents that schedule themselves, wake on events, and remember what matters over time.",
     image: "/plane.png",
-    link: "/research/proactive-agents",
+    link: "/research/long-horizon-agents",
     type: "research",
   },
   {

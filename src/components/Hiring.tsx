@@ -20,7 +20,7 @@ const roles: Role[] = [
   },
   {
     title: "Infrastructure Engineer",
-    description: "Working on memory systems, proactive agent runtimes, etc.",
+    description: "Working on memory systems, long-horizon agent runtimes, etc.",
     location: "San Francisco, CA",
   },
 ];

@@ -10,23 +10,23 @@ import { JoinUs } from "../../components/Hiring";
 import MemoryDiagram from "../../components/MemoryDiagram";
 import ScalingChart from "../../components/ScalingChart";
 import {
+  KeyTakeaways,
   ResearchArticle,
   Section,
   Subsection,
-  KeyTakeaways,
 } from "../../components/WhitePaper";
 
-export default function ProactiveAgents() {
+export default function LongHorizonAgents() {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
   return (
     <ResearchArticle
-      title="Building Proactive Agents"
+      title="Building Long-Horizon Agents"
       authors={["Orin Labs"]}
       date="October 2025"
-      abstract="We present a method for building proactive agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, proactive agents actively pursue goals without constant prompting. This describes the architecture, memory systems, and operational patterns that enable sustained autonomous behavior."
+      abstract="We present a method for building long-horizon agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, long-horizon agents actively pursue goals without constant prompting. This describes the architecture, memory systems, and operational patterns that enable sustained autonomous behavior."
     >
       <KeyTakeaways>
         <ul>
@@ -69,7 +69,7 @@ export default function ProactiveAgents() {
         </p>
         <p>
           This work presents a fundamental redesign of how agents operate. We
-          introduce the <strong>proactive agent</strong>: an agent that
+          introduce the <strong>long-horizon agent</strong>: an agent that
           schedules its own activities, reasons about time, and creates dynamic
           workflows on the fly. These systems maintain persistent awareness of
           context while adapting their behavior to align with changing
@@ -436,7 +436,7 @@ def run_every_min(...) # runs * * * * *
           long-term decision making, or the agent's quality of initiative.
         </p>
         <p>
-          We have found that evaluations of proactive agents must be done
+          We have found that evaluations of long-horizon agents must be done
           through long-term simulation, not single-step evaluation. To do this,
           we define a set of qualitative metrics for our use case and
           continuously judge our agents against them.
@@ -482,18 +482,18 @@ def run_every_min(...) # runs * * * * *
 
       <Section number="8" title="Conclusion">
         <p>
-          Building proactive AI agents requires rethinking how we architect
+          Building long-horizon AI agents requires rethinking how we architect
           autonomy. Instead of waiting for user prompts, these systems plan,
           remember, and act on their own timeline.
         </p>
         <p>
-          Proactive architectures are computationally expensive and
+          Long-horizon architectures are computationally expensive and
           operationally complex, but they create agents that <em>care</em>
           —systems that take responsibility for outcomes over time, not just
           individual interactions.
         </p>
         <p>
-          As reasoning models improve and inference costs fall, proactive agents
+          As reasoning models improve and inference costs fall, long-horizon agents
           will define the next generation of AI systems: continuously attentive,
           self-regulating, and aligned with their users' long-term interests.
         </p>
