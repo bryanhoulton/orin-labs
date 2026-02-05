@@ -178,7 +178,7 @@ export default function Home() {
               <div
                 className={cn(
                   "group relative flex flex-col aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden shadow-sm",
-                  "bg-primary hover:shadow-md transition-shadow cursor-pointer border"
+                  "bg-primary dark:bg-neutral-800 hover:shadow-md transition-shadow cursor-pointer border dark:border-neutral-700"
                 )}
               >
                 {/* Background image layer with screen blend */}
@@ -193,11 +193,11 @@ export default function Home() {
                 />
 
                 {/* Content overlay */}
-                <div className="relative z-20 flex flex-col gap-1 justify-between h-full p-4 text-black">
-                  <p className="text-xs ml-auto bg-white shadow border rounded px-1.5 py-0.5 w-fit capitalize text-neutral-600">
+                <div className="relative z-20 flex flex-col gap-1 justify-between h-full p-4 text-black dark:text-white">
+                  <p className="text-xs ml-auto bg-white dark:bg-neutral-800 shadow border dark:border-neutral-600 rounded px-1.5 py-0.5 w-fit capitalize text-neutral-600 dark:text-neutral-300">
                     {item.type}
                   </p>
-                  <h3 className="text-xl font-semibold group-hover:text-neutral-600 transition-colors">
+                  <h3 className="text-xl font-semibold group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
                     {item.title}
                   </h3>
                 </div>
