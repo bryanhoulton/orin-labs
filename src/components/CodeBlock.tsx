@@ -1,7 +1,10 @@
-import { useEffect, useRef } from "react";
+import {
+  useEffect,
+  useRef,
+} from 'react';
 
-import Prism from "prismjs";
-import { cn } from "slate-ui";
+import Prism from 'prismjs';
+import { cn } from 'slate-ui';
 
 interface CodeBlockProps {
   code: string;
@@ -27,13 +30,13 @@ export default function CodeBlock({
   return (
     <div
       className={cn(
-        "relative rounded-lg overflow-hidden bg-primary-50 dark:bg-primary-900 my-6 border border-primary-200 dark:border-primary-800",
+        "relative rounded-lg overflow-hidden bg-primary-50 dark:bg-neutral-800 my-6 border border-primary-200 dark:border-neutral-700",
         className
       )}
     >
       {/* Language badge */}
       {language && (
-        <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-xs font-mono uppercase tracking-wide border border-primary-300 dark:border-primary-800">
+        <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-primary-100 dark:bg-neutral-700 text-primary-700 dark:text-neutral-300 text-xs font-mono uppercase tracking-wide border border-primary-300 dark:border-neutral-600">
           {language}
         </div>
       )}

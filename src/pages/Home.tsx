@@ -178,12 +178,12 @@ export default function Home() {
               <div
                 className={cn(
                   "group relative flex flex-col aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden shadow-sm",
-                  "bg-primary dark:bg-neutral-800 hover:shadow-md transition-shadow cursor-pointer border dark:border-neutral-700"
+                  "bg-primary hover:shadow-md transition-shadow cursor-pointer border dark:border-neutral-700"
                 )}
               >
                 {/* Background image layer with screen blend */}
                 <div
-                  className="absolute -inset-1 bg-cover bg-center mix-blend-screen scale-105 group-hover:scale-115 transition-transform duration-500"
+                  className="dark:hidden absolute -inset-1 bg-cover bg-center mix-blend-screen scale-105 group-hover:scale-115 transition-transform duration-500"
                   style={{
                     backgroundImage: `url(${item.image})`,
                     filter: "grayscale(1)",
@@ -192,9 +192,24 @@ export default function Home() {
                   }}
                 />
 
+                <div className="absolute inset-0 dark:block hidden">
+                  <div className="absolute inset-0 w-full h-full bg-black mix-blend-multiply brightness-150">
+                    <div
+                      className="w-full h-full bg-cover bg-center mix-blend-screen scale-105 group-hover:scale-115 transition-transform duration-500"
+                      style={{
+                        backgroundImage: `url(${item.image})`,
+                        filter: "grayscale(1) invert(1)",
+                        willChange: "transform",
+                        backfaceVisibility: "hidden",
+                      }}
+                    />
+                  </div>
+                  <div className="absolute inset-0 w-full h-full bg-neutral-900 mix-blend-lighten brightness-125" />
+                </div>
+
                 {/* Content overlay */}
                 <div className="relative z-20 flex flex-col gap-1 justify-between h-full p-4 text-black dark:text-white">
-                  <p className="text-xs ml-auto bg-white dark:bg-neutral-800 shadow border dark:border-neutral-600 rounded px-1.5 py-0.5 w-fit capitalize text-neutral-600 dark:text-neutral-300">
+                  <p className="text-xs ml-auto bg-white dark:bg-neutral-700 shadow border dark:border-neutral-600 rounded px-1.5 py-0.5 w-fit capitalize text-neutral-600 dark:text-neutral-300">
                     {item.type}
                   </p>
                   <h3 className="text-xl font-semibold group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
