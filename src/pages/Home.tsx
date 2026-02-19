@@ -1,13 +1,10 @@
-import {
-  useEffect,
-  useRef,
-} from 'react';
+import { useEffect, useRef } from "react";
 
-import { ArrowDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { cn } from 'slate-ui';
+import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
+import { cn } from "slate-ui";
 
-import { JoinUs } from '../components/Hiring';
+import { JoinUs } from "../components/Hiring";
 
 type Initiative = {
   title: string;
@@ -17,17 +14,15 @@ type Initiative = {
 const initiatives: Initiative[] = [
   {
     title: "Proactivity",
-    description:
-      "Agents that control when they run, creating truly proactive experiences.",
+    description: "Agents that control when they run and what they do.",
   },
   {
     title: "Memory",
-    description:
-      "Building SOTA temporal memory for agents that drive outcomes.",
+    description: "Temporal memory for agents that run for years.",
   },
   {
     title: "Planning",
-    description: "Advancing agent planning and adaptability for long tasks.",
+    description: "Verification loops for long-horizon tasks.",
   },
 ];
 
@@ -49,7 +44,7 @@ const workItems: WorkItem[] = [
   },
   {
     title: "Generative UIs",
-    description: "Expressive, design-safe generative UIs.",
+    description: "Generate expressive, stateful, and design-safe UIs.",
     image: "/hand.png",
     link: "https://ui.orinlabs.org",
     type: "research",
@@ -109,7 +104,7 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary-100">
             We build agents
             <br />
-            that improve people.
+            that learn.
           </h1>
         </div>
 
