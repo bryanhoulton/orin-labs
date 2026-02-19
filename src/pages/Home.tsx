@@ -1,10 +1,13 @@
-import { useEffect, useRef } from "react";
+import {
+  useEffect,
+  useRef,
+} from 'react';
 
-import { ArrowDown } from "lucide-react";
-import { Link } from "react-router-dom";
-import { cn } from "slate-ui";
+import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { cn } from 'slate-ui';
 
-import { JoinUs } from "../components/Hiring";
+import { JoinUs } from '../components/Hiring';
 
 type Initiative = {
   title: string;
@@ -102,7 +105,7 @@ export default function Home() {
         />
         <div className="relative p-8 sm:p-12 lg:p-16 flex flex-col gap-6">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-primary-100">
-            We build agents
+            Building agents
             <br />
             that learn.
           </h1>
