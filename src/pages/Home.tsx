@@ -34,7 +34,7 @@ type WorkItem = {
   description: string;
   image: string;
   link?: string;
-  type: "product" | "research";
+  type: "product" | "research" | "infrastructure";
 };
 
 const workItems: WorkItem[] = [
@@ -44,6 +44,13 @@ const workItems: WorkItem[] = [
     image: "/book.png",
     link: "https://acadialearning.org",
     type: "product",
+  },
+  {
+    title: "Bedrock",
+    description: "Infrastructure for hyper long-horizon agents.",
+    image: "/bedrock.png",
+    link: "https://docs.bedrock.orinlabs.org",
+    type: "infrastructure",
   },
   {
     title: "Generative UIs",
