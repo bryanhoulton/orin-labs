@@ -16,12 +16,12 @@ type Initiative = {
 
 const initiatives: Initiative[] = [
   {
-    title: "Proactivity",
-    description: "Agents that control when they run and what they do.",
+    title: "Continual Learning",
+    description: "In-sample learning via experience.",
   },
   {
     title: "Memory",
-    description: "Temporal memory for agents that run for years.",
+    description: "Letting agents run and learn for decades.",
   },
   {
     title: "Planning",
