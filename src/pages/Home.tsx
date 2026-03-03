@@ -117,17 +117,6 @@ export default function Home() {
         <ArrowDown className="absolute bottom-10 sm:bottom-16 left-1/2 -translate-x-1/2 sm:left-16 sm:translate-x-0 group-hover:translate-y-2 transition-transform w-6 h-6 text-primary-100" />
       </div>
 
-      {/* Quote */}
-      <blockquote className="max-w-3xl mx-auto text-center">
-        <p className="text-2xl sm:text-3xl lg:text-4xl text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
-          "A teacher is someone who stands with you in the dark and holds their
-          flashlight just long enough for you to find your own."
-        </p>
-        <cite className="block mt-6 text-base sm:text-lg text-neutral-500 dark:text-neutral-500 not-italic">
-          — Steve Jobs
-        </cite>
-      </blockquote>
-
       {/* Initiatives */}
       <div className="flex flex-col items-start" id="initiatives">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 w-full">
@@ -246,6 +235,19 @@ export default function Home() {
 
       {/* Join Us */}
       <JoinUs />
+
+      <hr className="my-4" />
+
+      {/* Quote */}
+      <blockquote className="max-w-3xl mx-auto text-center">
+        <p className="text-2xl sm:text-3xl lg:text-4xl text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
+          "A teacher is someone who stands with you in the dark and holds their
+          flashlight just long enough for you to find your own."
+        </p>
+        <cite className="block mt-6 text-base sm:text-lg text-neutral-500 dark:text-neutral-500 not-italic">
+          — Steve Jobs
+        </cite>
+      </blockquote>
     </>
   );
 }
