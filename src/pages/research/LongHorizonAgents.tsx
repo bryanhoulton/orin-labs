@@ -1,20 +1,20 @@
-import "prismjs/components/prism-python";
-import "prismjs/components/prism-json";
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-json';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import Prism from "prismjs";
+import Prism from 'prismjs';
 
-import CodeBlock from "../../components/CodeBlock";
-import { JoinUs } from "../../components/Hiring";
-import MemoryDiagram from "../../components/MemoryDiagram";
-import ScalingChart from "../../components/ScalingChart";
+import CodeBlock from '../../components/CodeBlock';
+import { JoinUs } from '../../components/Hiring';
+import MemoryDiagram from '../../components/MemoryDiagram';
+import ScalingChart from '../../components/ScalingChart';
 import {
   KeyTakeaways,
   ResearchArticle,
   Section,
   Subsection,
-} from "../../components/WhitePaper";
+} from '../../components/WhitePaper';
 
 export default function LongHorizonAgents() {
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function LongHorizonAgents() {
     <ResearchArticle
       title="Building Long-Horizon Agents"
       authors={["Orin Labs"]}
-      date="October 2025"
+      date="May 2025"
       abstract="We present a method for building long-horizon agents that work continuously over time, schedule their own activities, and create workflows dynamically. Unlike traditional agents that only respond to user input, long-horizon agents actively pursue goals without constant prompting. This describes the architecture, memory systems, and operational patterns that enable sustained autonomous behavior."
     >
       <KeyTakeaways>
@@ -493,9 +493,10 @@ def run_every_min(...) # runs * * * * *
           individual interactions.
         </p>
         <p>
-          As reasoning models improve and inference costs fall, long-horizon agents
-          will define the next generation of AI systems: continuously attentive,
-          self-regulating, and aligned with their users' long-term interests.
+          As reasoning models improve and inference costs fall, long-horizon
+          agents will define the next generation of AI systems: continuously
+          attentive, self-regulating, and aligned with their users' long-term
+          interests.
         </p>
         <p>
           We're preparing a minimal reference for the scheduler and wake queue.
