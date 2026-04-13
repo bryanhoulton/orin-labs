@@ -50,9 +50,9 @@ export function JoinUs({ compact = false }: JoinUsProps) {
           Join Us
         </h2>
         <p className="text-base text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-          We are a small, San Francisco-based team focused on building AI for
-          consumer services. We are solving hard and important problems for real
-          people.
+          We are a small, San Francisco-based team focused on building
+          long-horizon agents. We are solving hard and important problems for
+          real people.
         </p>
         <ContactButton />
       </div>
@@ -72,9 +72,9 @@ export function JoinUs({ compact = false }: JoinUsProps) {
           <hr className="flex-1 hidden sm:block" />
         </div>
         <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-          We are a small, San Francisco-based team focused on building AI for
-          consumer services. We are solving hard and important problems for real
-          people.
+          We are a small, San Francisco-based team focused on building
+          long-horizon agents. We are solving hard and important problems for
+          real people.
         </p>
       </div>
 
