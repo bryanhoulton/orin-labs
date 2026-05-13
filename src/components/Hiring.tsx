@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink, Link } from 'lucide-react';
 import { cn } from 'slate-ui';
 
 type Role = {
@@ -10,14 +10,20 @@ type Role = {
 const roles: Role[] = [
   {
     title: "Research Engineer",
-    description: "Discovering novel techniques for long-horizon learning.",
     location: "San Francisco, CA",
   },
   {
     title: "Infrastructure Engineer",
-    description: "Working on memory systems, long-horizon agent runtimes, etc.",
     location: "San Francisco, CA",
   },
+  {
+    title: "Operations Lead",
+    location: "San Francisco, CA"
+  },
+  {
+    title: "[Pitch Yourself]",
+    location: "San Francisco, CA"
+  }
 ];
 
 function ContactButton({ className }: { className?: string }) {
@@ -43,65 +49,40 @@ interface JoinUsProps {
 }
 
 export function JoinUs({ compact = false }: JoinUsProps) {
-  if (compact) {
-    return (
-      <div className="flex flex-col gap-4 items-start w-full">
-        <h2 className="text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
-          Join Us
-        </h2>
-        <p className="text-base text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-          We are a small, San Francisco-based team focused on building
-          long-horizon agents. We are solving hard and important problems for
-          real people.
-        </p>
-        <ContactButton />
-      </div>
-    );
-  }
-
   return (
     <div
-      className="flex flex-col gap-2 sm:gap-8 items-start w-full"
+      className="flex flex-col gap-2 sm:gap-8 items-start w-full px-8 sm:px-12 lg:px-16"
       id="join-us"
     >
       <div className="flex flex-col gap-4 w-full">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 w-full">
-          <h2 className="text-3xl sm:text-5xl font-semibold text-neutral-900 dark:text-neutral-100">
-            Join Us
-          </h2>
+          <h3 className="text-xl sm:text-3xl font-semibold text-neutral-900 dark:text-neutral-100">
+            Open Roles
+          </h3>
           <hr className="flex-1 hidden sm:block" />
         </div>
-        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-          We are a small, San Francisco-based team focused on building
-          long-horizon agents. We are solving hard and important problems for
-          real people.
-        </p>
       </div>
 
-      <div className="flex flex-col items-stretch w-full">
+      <div className="flex flex-col items-stretch w-full divide-y">
         {roles.map((role) => (
-          <button
+          <a
             key={role.title}
             className={cn(
-              "flex text-left flex-col items-start gap-1 w-full hover:bg-neutral-100",
-              "dark:hover:bg-neutral-800",
-              "p-4 sm:p-5 md:-mx-4 transition-colors rounded-md group",
+              "flex items-center justify-between gap-1 flex-1 hover:bg-neutral-100",
+              "px-2 -pl-2 py-1 transition-colors group",
+              "dark:hover:bg-neutral-800 cursor-pointer",
             )}
+            href="mailto:bryan@orinlabs.ai"
           >
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-2">
-              <p className="text-lg font-bold text-neutral-900 dark:text-neutral-100 shrink-0 group-hover:text-primary transition-colors">
+              <p className="text-lg text-neutral-900 dark:text-neutral-100 shrink-0 group-hover:text-primary transition-colors">
                 {role.title}
               </p>
 
-              <p className="text-base text-neutral-400 dark:text-neutral-600 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors shrink-0 w-fit leading-relaxed">
+              <p className="text-base flex items-center gap-2 text-neutral-400 dark:text-neutral-600 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors shrink-0 w-fit leading-relaxed">
                 {role.location}
+                <ExternalLink className='w-3 h-3' />
               </p>
-            </div>
-
-            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 group-hover:text-neutral-900 dark:group-hover:text-neutral-100 transition-colors max-w-2xl leading-relaxed">
-              {role.description}
-            </p>
-          </button>
+          </a>
         ))}
       </div>
     </div>

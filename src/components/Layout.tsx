@@ -7,28 +7,9 @@ import { cn } from "slate-ui";
 import { Logo } from "./Logo";
 
 const NAV_ITEMS = [
-  { label: "Initiatives", path: "/#initiatives" },
-  { label: "Our Work", path: "/#our-work" },
   { label: "Join Us", path: "/#join-us" },
 ];
 
-function ContactButton({ className }: { className?: string }) {
-  return (
-    <a
-      href="https://cal.com/bryan-houlton-5uvxqc/orin-labs-contact"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(
-        "bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-400 transition-colors cursor-pointer",
-        "flex items-center w-fit justify-center gap-2 shadow-sm text-sm sm:text-base",
-        className
-      )}
-    >
-      Contact
-      <ArrowRight className="w-4 h-4" />
-    </a>
-  );
-}
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -37,7 +18,6 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Handle hash scrolling when the component mounts or location changes
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (hash) {
@@ -58,14 +38,11 @@ export default function Layout({ children }: LayoutProps) {
       const hash = path.split("#")[1];
       const element = document.getElementById(hash);
 
-      // If element exists on current page, scroll to it
       if (element) {
         e.preventDefault();
         element.scrollIntoView({ behavior: "smooth", block: "start" });
         setIsMenuOpen(false);
       }
-      // If not on home page, let the link navigate (React Router will handle it)
-      // and the scroll will happen via the hash in the URL
     } else {
       setIsMenuOpen(false);
     }
@@ -108,7 +85,6 @@ export default function Layout({ children }: LayoutProps) {
               </Link>
             ))}
 
-            <ContactButton />
           </div>
         </div>
 
@@ -129,7 +105,6 @@ export default function Layout({ children }: LayoutProps) {
             </Link>
           ))}
 
-          <ContactButton />
         </div>
       </nav>
 
@@ -142,12 +117,18 @@ export default function Layout({ children }: LayoutProps) {
         <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4">
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
             &copy; {new Date().getFullYear()} Orin Labs. All rights reserved.
-            <span className="mx-2">•</span>
-            <Link to="/privacy" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+            <span className="mx-2 text-xs">-</span>
+            <Link
+              to="/privacy"
+              className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            >
               Privacy
             </Link>
-            <span className="mx-2">•</span>
-            <Link to="/terms" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">
+            <span className="mx-2 text-xs">-</span>
+            <Link
+              to="/terms"
+              className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            >
               Terms
             </Link>
           </p>
@@ -159,7 +140,7 @@ export default function Layout({ children }: LayoutProps) {
               rel="noopener noreferrer"
               className="hover:text-primary-500 transition-colors cursor-pointer"
             >
-              <TwitterIcon className="w-4 h-4" />
+              <TwitterIcon className="w-3 h-3 font-light" />
             </a>
             <a
               href="https://www.linkedin.com/company/104572054/"
@@ -167,7 +148,7 @@ export default function Layout({ children }: LayoutProps) {
               rel="noopener noreferrer"
               className="hover:text-primary-500 transition-colors cursor-pointer"
             >
-              <LinkedinIcon className="w-4 h-4" />
+              <LinkedinIcon className="w-3 h-3 font-light" />
             </a>
           </div>
         </div>
