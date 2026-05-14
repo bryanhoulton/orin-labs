@@ -360,7 +360,7 @@ while True:
 
       <hr />
 
-      <JoinUs compact />
+      <JoinUs />
     </ResearchArticle>
   );
 }

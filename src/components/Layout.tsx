@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { ArrowRight, LinkedinIcon, Menu, TwitterIcon, X } from "lucide-react";
+import { LinkedinIcon, Menu, TwitterIcon, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "slate-ui";
 

@@ -4,12 +4,12 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <div className="relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800 bg-[#f4f5f0] dark:bg-neutral-900 min-h-[480px] sm:min-h-[560px] lg:min-h-[640px]">
+      <div className="relative overflow-hidden rounded-xl border border-neutral-200 dark:border-transparent bg-[#f4f5f0] dark:bg-neutral-900 min-h-[480px] sm:min-h-[560px] lg:min-h-[640px]">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-90 dark:opacity-60"
           style={{ backgroundImage: "url(/tree_color.jpeg)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#f4f5f0]/95 via-[#f4f5f0]/40 to-transparent dark:from-neutral-900/95 dark:via-neutral-900/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#f4f5f0]/95 via-[#f4f5f0]/40 to-transparent dark:from-neutral-800/95 dark:via-neutral-200/10 pointer-events-none" />
 
         <div className="relative z-10 flex flex-col justify-end h-full min-h-[480px] sm:min-h-[560px] lg:min-h-[640px] p-8 sm:p-12 lg:p-16">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-neutral-900 dark:text-neutral-100 leading-[1.05] max-w-3xl">

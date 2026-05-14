@@ -1,9 +1,8 @@
-import { ArrowRight, ExternalLink, Link } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { cn } from 'slate-ui';
 
 type Role = {
   title: string;
-  description: string;
   location: string;
 };
 
@@ -26,29 +25,7 @@ const roles: Role[] = [
   }
 ];
 
-function ContactButton({ className }: { className?: string }) {
-  return (
-    <a
-      href="https://cal.com/bryan-houlton-5uvxqc/orin-labs-contact"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(
-        "bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-400 transition-colors cursor-pointer",
-        "flex items-center justify-center gap-2 shadow-sm w-full sm:w-auto text-sm sm:text-base",
-        className,
-      )}
-    >
-      Contact
-      <ArrowRight className="w-4 h-4" />
-    </a>
-  );
-}
-
-interface JoinUsProps {
-  compact?: boolean;
-}
-
-export function JoinUs({ compact = false }: JoinUsProps) {
+export function JoinUs() {
   return (
     <div
       className="flex flex-col gap-2 sm:gap-8 items-start w-full px-8 sm:px-12 lg:px-16"
@@ -69,16 +46,16 @@ export function JoinUs({ compact = false }: JoinUsProps) {
             key={role.title}
             className={cn(
               "flex items-center justify-between gap-1 flex-1 hover:bg-neutral-100",
-              "px-2 -pl-2 py-1 transition-colors group",
+              "px-2 -pl-2 py-1 transition-colors group dark:border-neutral-700",
               "dark:hover:bg-neutral-800 cursor-pointer",
             )}
             href="mailto:bryan@orinlabs.ai"
           >
-              <p className="text-lg text-neutral-900 dark:text-neutral-100 shrink-0 group-hover:text-primary transition-colors">
+              <p className="text-lg text-neutral-900 dark:text-neutral-100 shrink-0 group-hover:text-primary group-hover:dark:text-primary-200 transition-colors">
                 {role.title}
               </p>
 
-              <p className="text-base flex items-center gap-2 text-neutral-400 dark:text-neutral-600 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors shrink-0 w-fit leading-relaxed">
+              <p className="text-base flex items-center gap-2 text-neutral-400 dark:text-neutral-500 group-hover:text-neutral-600 dark:group-hover:text-neutral-400 transition-colors shrink-0 w-fit leading-relaxed">
                 {role.location}
                 <ExternalLink className='w-3 h-3' />
               </p>

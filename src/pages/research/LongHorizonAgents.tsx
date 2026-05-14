@@ -507,7 +507,7 @@ def run_every_min(...) # runs * * * * *
 
       <hr />
 
-      <JoinUs compact />
+      <JoinUs />
     </ResearchArticle>
   );
 }
